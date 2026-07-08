@@ -2031,10 +2031,6 @@ body.performance-mode .window-meta span {
     background-size: 14px 14px;
   }
 
-  .boot {
-    display: none;
-  }
-
   .cursor-tag,
   .video-peek {
     display: none;
@@ -2075,6 +2071,10 @@ body.performance-mode .window-meta span {
 
   .boot-choice[data-boot-choice="interactive"],
   .mode-switch {
+    display: none;
+  }
+
+  .boot-choice.is-recommended::after {
     display: none;
   }
 

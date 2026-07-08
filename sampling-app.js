@@ -1017,10 +1017,18 @@
     const recommendedMode = mobileQuery.matches ? "read" : "interactive";
     const defaultHint =
       recommendedMode === "read"
-        ? "Recommended here: Read Mode. Start with the visual portfolio."
+        ? "Tap to enter the mobile visual portfolio."
         : "Recommended here: Interactive Mode. Start with the desktop app-performance.";
     if (elements.bootHint) elements.bootHint.textContent = defaultHint;
     elements.bootChoices.forEach((button) => {
+      if (button.dataset.bootChoice === "read") {
+        button.innerHTML = mobileQuery.matches
+          ? "ENTRAR<small>Portfolio visual / piezas / bio</small>"
+          : "Read Mode<small>Dossier first / clean reading</small>";
+        button.dataset.bootDescription = mobileQuery.matches
+          ? "Enter the mobile visual portfolio."
+          : "Start with the complete dossier. Clearer for mobile, reading and sending.";
+      }
       button.classList.toggle("is-recommended", button.dataset.bootChoice === recommendedMode);
     });
   }
@@ -1028,7 +1036,6 @@
   function syncMobileMode() {
     if (!mobileQuery.matches) return;
     state.reading = true;
-    elements.boot.classList.add("is-dismissed");
     state.openWindows.forEach((_, key) => closeWindow(key));
     stopVideoReveal();
   }
