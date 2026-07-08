@@ -2069,6 +2069,11 @@ body.performance-mode .window-meta span {
     grid-template-columns: 1fr;
   }
 
+  .boot-choice[data-boot-choice="interactive"],
+  .mode-switch {
+    display: none;
+  }
+
   .boot-choice {
     min-height: 84px;
     padding: 14px;

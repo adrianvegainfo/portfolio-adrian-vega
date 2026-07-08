@@ -492,6 +492,7 @@
   }
 
   function renderHero() {
+    if (mobileQuery.matches) state.reading = true;
     elements.heroDescription.innerHTML = ui().hero;
     elements.status.innerHTML = ui().status.map((item) => `<span>${item}</span>`).join("");
     elements.languageButtons.forEach((button) => {
@@ -665,6 +666,7 @@
   }
 
   function renderAll() {
+    if (mobileQuery.matches) state.reading = true;
     renderNavigation();
     renderHero();
     renderFolders();
@@ -980,6 +982,7 @@
   }
 
   function toggleReading() {
+    if (mobileQuery.matches) return;
     saveCurrentDom();
     state.reading = !state.reading;
     document.body.classList.toggle("reading-mode", state.reading);
@@ -995,6 +998,7 @@
   }
 
   function enterBootMode(mode) {
+    if (mobileQuery.matches) mode = "read";
     state.reading = mode === "read";
     document.body.classList.toggle("reading-mode", state.reading);
     if (state.reading) {
@@ -1154,6 +1158,12 @@
     window.addEventListener("pointercancel", releaseAllDrags);
     window.addEventListener("resize", () => {
       releaseAllDrags();
+      if (mobileQuery.matches && !state.reading) {
+        state.reading = true;
+        state.openWindows.forEach((_, key) => closeWindow(key));
+        stopVideoReveal();
+        renderHero();
+      }
       refreshBootChoices();
       state.openWindows.forEach((win) => clampToViewport(win));
     });
