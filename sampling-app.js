@@ -1025,6 +1025,14 @@
     });
   }
 
+  function syncMobileMode() {
+    if (!mobileQuery.matches) return;
+    state.reading = true;
+    elements.boot.classList.add("is-dismissed");
+    state.openWindows.forEach((_, key) => closeWindow(key));
+    stopVideoReveal();
+  }
+
   function exportEdits() {
     saveCurrentDom();
     const storage = Object.fromEntries(
@@ -1158,10 +1166,8 @@
     window.addEventListener("pointercancel", releaseAllDrags);
     window.addEventListener("resize", () => {
       releaseAllDrags();
-      if (mobileQuery.matches && !state.reading) {
-        state.reading = true;
-        state.openWindows.forEach((_, key) => closeWindow(key));
-        stopVideoReveal();
+      if (mobileQuery.matches) {
+        syncMobileMode();
         renderHero();
       }
       refreshBootChoices();
@@ -1175,6 +1181,7 @@
   function initialise() {
     migrateLegacyEdits();
     migrateContentRevisions();
+    syncMobileMode();
     bindControls();
     renderAll();
     refreshBootChoices();
