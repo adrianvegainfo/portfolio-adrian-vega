@@ -1142,6 +1142,8 @@ body.reading-mode .reading-view {
 
 .presentation-preview iframe,
 .presentation-preview img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
@@ -1149,6 +1151,16 @@ body.reading-mode .reading-view {
   object-fit: cover;
   pointer-events: none;
   transform: scale(1.03);
+}
+
+.presentation-preview::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: 84px;
+  background: linear-gradient(#080808 0%, rgba(8, 8, 8, 0.86) 54%, rgba(8, 8, 8, 0));
+  pointer-events: none;
 }
 
 .presentation-link {
@@ -2015,24 +2027,51 @@ body.performance-mode .window-meta span {
 }
 
 @media (max-width: 760px) {
+  body {
+    background-size: 14px 14px;
+  }
+
   .cursor-tag,
   .video-peek {
     display: none;
   }
 
   .topbar {
-    position: relative;
+    position: sticky;
     grid-template-columns: minmax(0, 1fr) max-content;
-    gap: 7px;
+    gap: 6px;
+    border-bottom-width: 3px;
+    padding: 6px;
+  }
+
+  .brand {
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 0.67rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .boot-log {
     max-height: calc(100svh - 28px);
     overflow-y: auto;
+    width: calc(100vw - 18px);
+    border-width: 2px;
+    padding: 14px;
+    font-size: 0.86rem;
+  }
+
+  .boot-title {
+    font-size: clamp(2.15rem, 14vw, 4.4rem);
   }
 
   .boot-actions {
     grid-template-columns: 1fr;
+  }
+
+  .boot-choice {
+    min-height: 84px;
+    padding: 14px;
   }
 
   .topbar nav {
@@ -2040,10 +2079,13 @@ body.performance-mode .window-meta span {
     overflow-x: auto;
     flex-wrap: nowrap;
     padding-bottom: 3px;
+    justify-content: flex-start;
+    scroll-snap-type: x proximity;
   }
 
   .topbar nav a {
     flex: 0 0 auto;
+    scroll-snap-align: start;
   }
 
   .toolbar {
@@ -2120,18 +2162,96 @@ body.performance-mode .window-meta span {
     grid-template-columns: 1fr;
   }
 
+  body.reading-mode .reading-view {
+    gap: 30px;
+    padding: 18px 10px 46px;
+  }
+
+  .reading-presentation {
+    scroll-margin-top: 106px;
+  }
+
+  .section-head {
+    margin-bottom: 16px;
+  }
+
+  .section-head h2 {
+    max-width: 9ch;
+    font-size: clamp(2.7rem, 15vw, 4.6rem);
+  }
+
+  .section-intro {
+    margin-top: 12px;
+    font-size: 0.98rem;
+    line-height: 1.42;
+  }
+
   .presentation-card,
   .presentation-card:nth-child(2n),
   .presentation-card:hover,
   .presentation-card:focus-within,
   .presentation-card:nth-child(2n):hover,
   .presentation-card:nth-child(2n):focus-within {
-    min-height: 390px;
+    min-height: min(76svh, 480px);
     transform: none;
   }
 
   .presentation-copy {
-    min-height: 120px;
+    min-height: 126px;
+    padding: 14px 62px 14px 14px;
+  }
+
+  .presentation-copy strong {
+    font-size: clamp(1.65rem, 8.5vw, 2.7rem);
+  }
+
+  .presentation-copy small {
+    font-size: 0.92rem;
+  }
+
+  .presentation-play {
+    right: 12px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .reading-section {
+    scroll-margin-top: 106px;
+    border-width: 2px;
+    box-shadow: 5px 5px 0 #080808;
+  }
+
+  .reading-bar {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 0.64rem;
+  }
+
+  .reading-section-content {
+    padding: 14px;
+  }
+
+  .reading-section h2 {
+    max-width: 10ch;
+    font-size: clamp(2.15rem, 11vw, 3.8rem);
+    line-height: 0.86;
+  }
+
+  .reading-media {
+    margin: 14px 0;
+    box-shadow: 5px 5px 0 #080808;
+  }
+
+  .reading-tab {
+    padding: 13px;
+    box-shadow: 4px 4px 0 #080808;
+  }
+
+  .reading-tab p,
+  .window-tab-content p {
+    font-size: 0.98rem;
+    line-height: 1.48;
   }
 
   .desktop-window {
@@ -2165,9 +2285,7 @@ body.performance-mode .window-meta span {
   }
 
   .edit-panel {
-    right: 6px;
-    bottom: 6px;
-    max-width: calc(100vw - 12px);
+    display: none;
   }
 }
 

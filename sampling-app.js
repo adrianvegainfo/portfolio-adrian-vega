@@ -1010,10 +1010,10 @@
   }
 
   function refreshBootChoices() {
-    const recommendedMode = "interactive";
+    const recommendedMode = mobileQuery.matches ? "read" : "interactive";
     const defaultHint =
       recommendedMode === "read"
-        ? "Recommended here: Read Mode. Start with the complete dossier."
+        ? "Recommended here: Read Mode. Start with the visual portfolio."
         : "Recommended here: Interactive Mode. Start with the desktop app-performance.";
     if (elements.bootHint) elements.bootHint.textContent = defaultHint;
     elements.bootChoices.forEach((button) => {
