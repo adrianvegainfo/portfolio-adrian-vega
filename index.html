@@ -1,243 +1,161 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Movement works, biography and artistic trajectory of choreographer and performer Adrian Vega.">
-    <title>Portfolio Adri&aacute;n Vega</title>
-    <link rel="stylesheet" href="./metarage-core.css">
-    <link rel="stylesheet" href="./styles.css">
+    <title>Adrian Vega | Choreographer, Performer and Visual Artist</title>
+    <meta
+      name="description"
+      content="Official website of Adrian Vega, choreographer, performer and visual artist working across post Hip Hop, contemporary dance, flamenco footwork, sound, moving image, pedagogy and body archive."
+    >
+    <meta property="og:title" content="Adrian Vega | Choreographer, Performer and Visual Artist">
+    <meta property="og:description" content="Works, education projects, biography and current research by Adrian Vega.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.adrianvega.art/">
+    <meta property="og:image" content="./assets/sampling-visual/muestra-proyeccion-mylar-publico.jpg">
+    <link rel="canonical" href="https://www.adrianvega.art/">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Adrian Vega",
+        "jobTitle": ["Choreographer", "Performer", "Visual Artist"],
+        "url": "https://www.adrianvega.art/",
+        "sameAs": [
+          "https://adrianvegainfo.github.io/portfolio-adrian-vega/",
+          "https://adrianvegainfo.github.io/Sampling.metarage/"
+        ],
+        "knowsAbout": ["post Hip Hop", "contemporary dance", "flamenco footwork", "performance", "moving image", "sound", "pedagogy"]
+      }
+    </script>
+    <link rel="stylesheet" href="./sampling-v2.css?v=20260708-presentation-first">
   </head>
-
   <body>
-    <button class="boot" type="button" data-entry aria-label="Enter Adrian Vega movement portfolio">
-      <img class="entry-image" src="./assets/digital-bodies-entry.jpg" alt="">
-      <span class="entry-code">&lt;body state="loading"&gt;</span>
-      <span class="entry-letter">A</span>
-      <span class="entry-status">MOVEMENT_ARCHIVE / ACTIVE</span>
-      <span class="entry-action">SKIP / TOUCH TO ENTER</span>
-      <span class="entry-progress" aria-hidden="true"></span>
-    </button>
+    <div class="boot" data-boot role="dialog" aria-label="Choose Adrian Vega mode">
+      <img class="boot-image" src="./assets/loading-tv-congelada.png" alt="">
+      <div class="boot-log">
+        <span class="boot-title">Loading...</span>
+        <span>Adrian Vega...</span>
+        <span>loading body archive...</span>
+        <span>opening performance mode...</span>
+        <span>opening works, education and bio...</span>
+        <div class="boot-actions" aria-label="Choose how to enter the dossier">
+          <button
+            class="boot-choice"
+            type="button"
+            data-boot-choice="read"
+            data-boot-description="Start with the complete dossier. Clearer for mobile, reading and sending."
+          >
+            Read Mode
+            <small>Dossier first / clean reading</small>
+          </button>
+          <button
+            class="boot-choice"
+            type="button"
+            data-boot-choice="interactive"
+            data-boot-description="Open the desktop app-performance: boxes, windows, movement and shuffle."
+          >
+            Interactive Mode
+            <small>Desktop app / boxes / signal</small>
+          </button>
+        </div>
+        <p class="boot-hint" data-boot-hint>Hover or touch a mode to preview. Click to enter.</p>
+      </div>
+    </div>
 
-    <div class="cursor-tag" aria-hidden="true">movement</div>
-    <div class="signal-line" aria-hidden="true"></div>
+    <div class="cursor-tag" aria-hidden="true" data-cursor-tag>sampling</div>
+    <div class="signal-line" aria-hidden="true" data-signal-line></div>
 
     <header class="topbar">
-      <a class="brand" href="#desktop" data-cursor="home">ADRIAN VEGA / MOVEMENT</a>
-      <nav aria-label="Main navigation">
-        <a href="#bio" data-cursor="profile">BIO</a>
-        <a href="#works" data-cursor="watch">WORKS</a>
-        <a href="#trajectory" data-cursor="trajectory">TRAJECTORY</a>
-      </nav>
-      <button class="mode-button" type="button" data-mode-toggle>performance mode</button>
-      <button class="panic-button" type="button" data-shuffle>shuffle system</button>
+      <a class="brand" href="#desktop" data-cursor-label="Adrian Vega">ADRIAN VEGA / PERFORMANCE MODE</a>
+      <nav aria-label="Main navigation" data-nav></nav>
+      <div class="toolbar">
+        <button class="mode-button mode-switch" type="button" data-reading-toggle>INTERACTIVE MODE</button>
+        <div class="language-menu">
+          <button class="icon-button" type="button" data-language-toggle aria-label="Language" aria-expanded="false">&#9678;</button>
+          <div class="language-switcher" role="group" aria-label="Language" hidden>
+            <button type="button" data-lang="es">ES</button>
+            <button type="button" data-lang="ca">CA</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+        </div>
+        <button class="icon-button" type="button" data-performance-toggle aria-label="Dark mode">&#9680;</button>
+      </div>
     </header>
 
     <main id="desktop">
-      <section class="desktop-hero" aria-labelledby="page-title">
-        <div class="hero-image">
-          <img src="./assets/uGa9oe7glzI.jpg" alt="Adrian Vega performing footwork in We Are Just Okey">
+      <section class="desktop-hero" data-hero>
+        <div class="autoplay-frame" aria-hidden="true">
+          <iframe
+            src="https://www.youtube.com/embed/pkP5lEjQFqI?autoplay=1&mute=1&controls=0&loop=1&playlist=pkP5lEjQFqI&modestbranding=1&playsinline=1"
+            title="Adrian Vega research loop"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowfullscreen
+          ></iframe>
         </div>
 
+        <figure class="hero-image">
+          <img
+            src="./assets/sampling-visual/muestra-proyeccion-mylar-publico.jpg"
+            alt="Adrian Vega performance research with projection, mylar and body"
+            data-edit-image
+            data-edit-id="hero-image"
+          >
+        </figure>
+
         <div class="hero-copy">
-          <p class="sysline">C:/ADRIAN_VEGA/MOVEMENT_SELECTION</p>
-          <h1 id="page-title">Adrian Vega</h1>
-          <p class="hero-lead">Choreographer, performer and visual artist working across post Hip Hop, contemporary dance, flamenco footwork, sound and moving image.</p>
-          <div class="tag-list" aria-label="Practice keywords">
-            <span>RHYTHM</span>
-            <span>FOOTWORK</span>
-            <span>PARTNERING</span>
-            <span>INSTANT COMPOSITION</span>
-            <span>BRUSSELS / BARCELONA</span>
+          <p class="sysline">C:/ADRIAN_VEGA/PERFORMANCE_MODE</p>
+          <h1 data-hero-title data-edit-text data-edit-id="hero-title">Adrian Vega</h1>
+          <p data-hero-description data-edit-text data-edit-id="hero-description"></p>
+          <div class="tag-list" aria-label="Keywords">
+            <span>body archive</span>
+            <span>works</span>
+            <span>education</span>
+            <span>moving image</span>
+            <span>Sampling</span>
           </div>
         </div>
 
-        <div class="status-panel">
-          <span>status: performer available</span>
-          <span>archive: 2013 / 2026</span>
-          <span>focus: movement / rhythm / relation</span>
-        </div>
-
+        <div class="status-panel" data-status-panel></div>
+        <div class="folder-stage" data-folder-stage aria-label="Interactive dossier folders"></div>
+        <button class="shuffle-button desktop-shuffle" type="button" data-shuffle>SHUFFLE DESKTOP</button>
+        <button class="video-peek" type="button" data-video-peek aria-label="Reveal research video">VIDEO SIGNAL</button>
       </section>
 
-      <section class="marquee" aria-label="Movement vocabulary">
-        <div>
-          <span>footwork</span><span>coordination</span><span>partnering</span><span>floor</span><span>pulse</span><span>weight</span><span>percussion</span>
-          <span>footwork</span><span>coordination</span><span>partnering</span><span>floor</span><span>pulse</span><span>weight</span><span>percussion</span>
-        </div>
-      </section>
-
-      <section class="window intro-window" id="bio">
-        <div class="window-bar">
-          <span>ADRIAN_VEGA.profile</span>
-          <span>_ [] x</span>
-        </div>
-        <div class="window-content intro-grid">
-          <p>Adrian Vega is a choreographer, performer and visual artist trained at the Institut del Teatre in Barcelona. His movement practice brings together Hip Hop, contemporary dance and flamenco through rhythmic articulation, floor techniques, inversion and instant composition. He approaches the body as an archive of rhythms, gestures and cultural crossings.</p>
-          <p>His work moves between performance, installation, sound and moving image. As a performer, he is drawn to precise coordination, physical dialogue and the way a group can build a shared pulse through attention. His current practice develops from a post Hip Hop perspective, connecting footwork, acoustic presence, partnering and audiovisual thinking.</p>
+      <section class="marquee living-marquee" aria-label="Keywords">
+        <div class="living-marquee-track">
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
         </div>
       </section>
 
-      <section class="section selection-section" id="works">
-        <div class="section-head">
-          <p class="sysline">/ARCHIVE/MOVEMENT_FILES</p>
-          <h2>Works</h2>
-          <p class="section-intro">A compact selection across duets, solo practice and footwork research. Each file appears once.</p>
-        </div>
-
-        <div class="folder-grid movement-grid">
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://www.youtube.com/embed/uGa9oe7glzI?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=uGa9oe7glzI&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="uGa9oe7glzI" data-provider="youtube" data-title="We Are Just Okey" aria-label="Open We Are Just Okey video">
-              <span class="file-type">DUET</span>
-              <span class="card-copy"><strong>We Are Just Okey</strong><small>Footwork, inverted movement and shared rhythm</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://www.youtube.com/embed/3dWio72gp3c?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=3dWio72gp3c&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="3dWio72gp3c" data-provider="youtube" data-title="Los Lunares del Puma" aria-label="Open Los Lunares del Puma video">
-              <span class="file-type">SOLO</span>
-              <span class="card-copy"><strong>Los Lunares del Puma</strong><small>Solo performance and camera based research</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://www.youtube.com/embed/E9uc33wO4AA?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=E9uc33wO4AA&amp;start=30&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="E9uc33wO4AA" data-provider="youtube" data-start="30" data-title="EkXina / Outdoors" aria-label="Open EkXina outdoors video">
-              <span class="file-type">FOOTWORK</span>
-              <span class="card-copy"><strong>EkXina / Outdoors</strong><small>Footwork and jumps from 00:30</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://www.youtube.com/embed/LyxcxNAjvNM?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=LyxcxNAjvNM&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="LyxcxNAjvNM" data-provider="youtube" data-title="EkXina / Indoors" aria-label="Open EkXina indoors video">
-              <span class="file-type">DUET</span>
-              <span class="card-copy"><strong>EkXina / Indoors</strong><small>The same material moving in another direction</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://player.vimeo.com/video/1040008387?autoplay=1&amp;muted=1&amp;loop=1&amp;background=1" title="" tabindex="-1" allow="autoplay; fullscreen; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="1040008387" data-provider="vimeo" data-title="Un Ultimo Recuerdo" aria-label="Open Un Ultimo Recuerdo video">
-              <span class="file-type">DUET</span>
-              <span class="card-copy"><strong>Un Ultimo Recuerdo</strong><small>Earlier duet with partnering material</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://www.youtube.com/embed/EcxniVksw6E?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=EcxniVksw6E&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="EcxniVksw6E" data-provider="youtube" data-title="Sampling / Recap" aria-label="Open Sampling recap video">
-              <span class="file-type">SOLO</span>
-              <span class="card-copy"><strong>Sampling / Recap</strong><small>Current research across body, sound and image</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-
-          <article class="folder-card movement-card">
-            <div class="preview-video" aria-hidden="true"><iframe src="https://www.youtube.com/embed/pkP5lEjQFqI?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=pkP5lEjQFqI&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture"></iframe></div>
-            <button class="video-trigger" type="button" data-video="pkP5lEjQFqI" data-provider="youtube" data-title="Sampling / Teaser" aria-label="Open Sampling teaser video">
-              <span class="file-type">SOLO</span>
-              <span class="card-copy"><strong>Sampling / Teaser</strong><small>Physical pulse, floorwork and audiovisual research</small></span>
-              <span class="card-arrow" aria-hidden="true">&#9654;</span>
-            </button>
-          </article>
-        </div>
-      </section>
-
-      <section class="section trajectory-section" id="trajectory">
-        <div class="section-head">
-          <p class="sysline">/CV/SELECTED_TRAJECTORY</p>
-          <h2>Trajectory</h2>
-        </div>
-
-        <div class="trajectory-grid">
-          <article class="trajectory-block trajectory-lead">
-            <span class="file-type">INDEPENDENT CREATION / 2020 - NOW</span>
-            <h3>Own work</h3>
-            <p><strong>We Are Just Okey</strong> (2020/21), <strong>Titulo Provisional</strong> (2021), <strong>Los Lunares del Puma</strong> (2022), <strong>EkXina</strong> (2023), <strong>Garabatos</strong> (2023), <strong>Inaudit</strong> (2024), <strong>Digital Bodies: Echo &amp; Delay</strong> (2025) and <strong>Sampling</strong> (current research).</p>
-            <div class="iron-awards support-log">
-              <p><strong>2023</strong> CLT019 Research and Innovation Grant for EkXina</p>
-              <p><strong>2022</strong> CLT019 Research and Innovation Grant for Los Lunares del Puma</p>
-            </div>
-          </article>
-
-          <article class="trajectory-block">
-            <span class="file-type">COLLABORATIONS / IRON SKULLS CO / 2012 - 2021</span>
-            <h3>Co-founder and collaborator</h3>
-            <p>Co-artistic director, dramaturg, spokesperson and performer in <strong>Sinestesia</strong>, <strong>Nur</strong>, <strong>Kintsugi</strong>, <strong>No Sin Mis Huesos</strong> and <strong>Un Ultimo Recuerdo</strong>.</p>
-            <div class="iron-international">
-              <h4>Selected international performances</h4>
-              <ul>
-                <li><strong>Breakin' Convention</strong><span>London</span></li>
-                <li><strong>Summer Dance Forever</strong><span>Amsterdam</span></li>
-                <li><strong>SummerStage</strong><span>New York</span></li>
-                <li><strong>Hip Hop International</strong><span>San Francisco</span></li>
-              </ul>
-            </div>
-            <div class="iron-awards">
-              <p><strong>2018</strong> First Prize, Kintsugi, Snap Festival</p>
-              <p><strong>2017</strong> First Prize, Kintsugi, Burgos New York</p>
-              <p><strong>2014</strong> First Prize, Sinestesia, Burgos New York</p>
-              <p><strong>2014</strong> Audience Award, Sinestesia, 10 Sentidos</p>
-              <p><strong>2013</strong> First Prize, Sinestesia, Hop Festival</p>
-              <p><strong>2013</strong> Audience Award, Sinestesia, Dance and Theater Fair of Huesca</p>
-              <p><strong>2013</strong> Audience Award, Sinestesia, Estrena't</p>
-            </div>
-          </article>
-
-          <article class="trajectory-block">
-            <span class="file-type">COLLABORATIONS / JAZZBETWEEN / 2017 - 2021</span>
-            <h3>Collaborator</h3>
-            <p>Assistant director, dancer and video artist for <strong>Jazzbetween.live</strong> and <strong>Re.titled</strong>, awarded first prize at the Sabadell Choreographic Competition.</p>
-          </article>
-
-          <article class="trajectory-block">
-            <span class="file-type">COLLABORATIONS / JUAN CARLOS LERIDA / 2019 - 2021</span>
-            <h3>Collaborator</h3>
-            <p>Performer and video artist in <strong>Doce</strong> and <strong>Postablao</strong>. Doce received Best National Creation at the Catalan Critics Awards.</p>
-          </article>
-
-          <article class="trajectory-block">
-            <span class="file-type">COLLABORATIONS / TANGELBENZAL / 2017 - 2018</span>
-            <h3>Collaborator</h3>
-            <p>Dancer in <strong>Handle With Care</strong>, first prize at the Institut del Teatre choreographic competition.</p>
-          </article>
-
-          <article class="trajectory-block">
-            <span class="file-type">TEACHING / INSTITUT DEL TEATRE / 2017 - 2023</span>
-            <h3>Guest teacher</h3>
-            <p>Guest teacher at the Professional Dance Conservatory of Barcelona, sharing movement, composition and hybrid dance practices.</p>
-          </article>
-        </div>
-      </section>
-
-      <footer class="contact" id="contact">
-        <div>
-          <p class="sysline">/CONTACT/BRUSSELS</p>
-          <h2>Let's move</h2>
-        </div>
-        <div class="contact-actions">
-          <a href="mailto:adrianvega.info@gmail.com">adrianvega.info@gmail.com</a>
-          <a href="https://adrianvega.art/" target="_blank" rel="noreferrer">adrianvega.art &#8599;</a>
-        </div>
-      </footer>
+      <section class="reading-view" data-reading-view aria-live="polite"></section>
     </main>
 
-    <dialog class="video-modal" data-video-modal>
-      <div class="window-bar">
-        <span data-modal-title>VIDEO.file</span>
-        <button type="button" data-modal-close aria-label="Close video">x</button>
-      </div>
-      <div class="modal-frame" data-modal-frame></div>
-    </dialog>
+    <div class="desktop-layer" data-desktop-layer aria-live="polite"></div>
 
-    <script src="./script.js"></script>
+    <footer class="site-footer">
+      <strong>Adrian Vega</strong>
+      <a href="https://adrianvegainfo.github.io/portfolio-adrian-vega/#trajectory" target="_blank" rel="noreferrer">Portfolio</a>
+      <a href="https://adrianvegainfo.github.io/Sampling.metarage/" target="_blank" rel="noreferrer">Sampling dossier</a>
+      <a href="https://adrianvega.art/" target="_blank" rel="noreferrer">adrianvega.art</a>
+    </footer>
+
+    <div class="edit-panel" aria-label="Local editor" hidden>
+      <button type="button" data-edit-toggle>EDITAR</button>
+      <button type="button" data-edit-save>GUARDAR</button>
+      <button type="button" data-edit-export>EXPORTAR</button>
+      <button type="button" data-edit-import>IMPORTAR</button>
+      <button type="button" data-edit-clear>RESTAURAR</button>
+      <span data-edit-status>VISTA</span>
+    </div>
+    <input type="file" accept="image/*" data-image-picker hidden>
+    <input type="file" accept="application/json,.json" data-edit-import-picker hidden>
+
+    <script src="./sampling-content.js?v=20260708-presentation-first"></script>
+    <script src="./sampling-app.js?v=20260708-presentation-first"></script>
   </body>
 </html>

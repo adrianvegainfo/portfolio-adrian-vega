@@ -1,15 +1,12 @@
-# Portfolio Adrián Vega
+# Sampling.metarage v2
 
-Single-page movement portfolio, biography and artistic trajectory, built for GitHub Pages.
+Interactive web dossier for Sampling / Metalab by Adrián Vega.
 
-## Public files
+Public URL: https://adrianvegainfo.github.io/Sampling.metarage/
 
-The site is static and has no build step. Publish the repository root with GitHub Pages.
+Local URL: http://127.0.0.1:4173/
 
-Expected URL after publishing:
-
-`https://adrianvegainfo.github.io/portfolio-adrian-vega/`
-
-## Local preview
-
-Open `index.html` directly or serve the folder with any static web server.
+- Global French, Dutch and English content.
+- Seven draggable dossier folders with unique tabbed windows.
+- Linear reading mode.
+- Local multilingual text and image editor.
