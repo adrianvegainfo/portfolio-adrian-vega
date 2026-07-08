@@ -110,7 +110,7 @@ window.SAMPLING_CONTENT = {
         es: [
           {
             title: "Proyecto",
-            html: `<p><em>Sampling</em> es la nueva creacion de Adrian Vega: una investigacion escenica donde el cuerpo funciona como archivo, pantalla, sensor y sampler fisico.</p><p>La pieza trabaja con gestos que viajan entre culturas populares, memoria corporal, flamenco, breaking, futbol, imagen en directo y sonido producido por el propio cuerpo.</p>`,
+            html: `<p><em>Sampling</em> habita la imposibilidad de que un solo cuerpo construya un contraarchivo del mosaico cultural de la Peninsula Iberica en tension con la idea de identidad espanola.</p><p>La pieza parte de una intuicion fisica: toda identidad colectiva se construye tambien a traves del cuerpo. Antes de convertirse en relato, tradicion, bandera o memoria oficial, una identidad se aprende en la postura, en el ritmo, en la forma de caminar, mirar, callar, golpear el suelo, ocupar espacio o contenerse.</p><p>El cuerpo guarda formas de pertenencia transmitidas por la familia, el futbol, el flamenco, la television, la fiesta, la disciplina y el deseo. A traves de operaciones propias del sampling como cortar, repetir, desplazar, superponer y recomponer, la pieza trabaja sobre el cuerpo, su imagen y su sonoridad para construir un archivo en transformacion.</p><p>En el horizonte de los cincuenta anos de las primeras elecciones democraticas de 1977 y de la Constitucion de 1978, <em>Sampling</em> se situa entre la celebracion y la pregunta. Celebra las libertades recibidas mientras vuelve a escuchar los cuerpos, culturas, memorias y contradicciones que componen una identidad todavia en construccion.</p>`,
           },
           {
             title: "Escena",
@@ -124,7 +124,7 @@ window.SAMPLING_CONTENT = {
         ca: [
           {
             title: "Projecte",
-            html: `<p><em>Sampling</em> es la nova creacio d'Adrian Vega: una investigacio escenica on el cos funciona com a arxiu, pantalla, sensor i sampler fisic.</p><p>La peca treballa amb gestos que viatgen entre cultures populars, memoria corporal, flamenc, breaking, futbol, imatge en directe i so produït pel propi cos.</p>`,
+            html: `<p><em>Sampling</em> habita la impossibilitat que un sol cos construeixi un contraarxiu del mosaic cultural de la Peninsula Iberica en tensio amb la idea d'identitat espanyola.</p><p>La peca parteix d'una intuicio fisica: tota identitat col.lectiva es construeix tambe a traves del cos. Abans de convertir-se en relat, tradicio, bandera o memoria oficial, una identitat s'apren en la postura, en el ritme, en la manera de caminar, mirar, callar, colpejar el terra, ocupar espai o contenir-se.</p><p>El cos guarda formes de pertinenca transmeses per la familia, el futbol, el flamenc, la televisio, la festa, la disciplina i el desig. A traves d'operacions propies del sampling com tallar, repetir, desplacar, superposar i recompondre, la peca treballa sobre el cos, la seva imatge i la seva sonoritat per construir un arxiu en transformacio.</p><p>En l'horitzo dels cinquanta anys de les primeres eleccions democratiques de 1977 i de la Constitucio de 1978, <em>Sampling</em> se situa entre la celebracio i la pregunta. Celebra les llibertats rebudes mentre torna a escoltar els cossos, cultures, memories i contradiccions que componen una identitat encara en construccio.</p>`,
           },
           {
             title: "Escena",
@@ -138,7 +138,7 @@ window.SAMPLING_CONTENT = {
         en: [
           {
             title: "Project",
-            html: `<p><em>Sampling</em> is Adrian Vega's new creation: a stage research where the body works as archive, screen, sensor and physical sampler.</p><p>The piece works with gestures that travel through popular cultures, bodily memory, flamenco, breaking, football, live image and sound produced by the body itself.</p>`,
+            html: `<p><em>Sampling</em> inhabits the impossibility of a single body building a counter-archive of the cultural mosaic of the Iberian Peninsula in tension with the idea of Spanish identity.</p><p>The piece begins from a physical intuition: every collective identity is also built through the body. Before becoming narrative, tradition, flag or official memory, identity is learned through posture, rhythm, ways of walking, looking, staying silent, striking the floor, occupying space or holding oneself back.</p><p>The body stores forms of belonging transmitted by family, football, flamenco, television, celebration, discipline and desire. Through operations proper to sampling, such as cutting, repeating, displacing, overlaying and recomposing, the piece works on the body, its image and its sonority to build an archive in transformation.</p><p>On the horizon of the fiftieth anniversary of the first democratic elections of 1977 and the Constitution of 1978, <em>Sampling</em> places itself between celebration and question. It celebrates inherited freedoms while listening again to the bodies, cultures, memories and contradictions that compose an identity still under construction.</p>`,
           },
           {
             title: "Stage",
