@@ -459,6 +459,11 @@
         ca: "Tallers de cos, imatge i tecnologia quotidiana",
         en: "Workshops across body, image and everyday technology",
       },
+      supports: {
+        es: "Becas, desarrollo, coproducciones y residencias",
+        ca: "Beques, desenvolupament, coproduccions i residencies",
+        en: "Grants, development, co-productions and residencies",
+      },
       bio: {
         es: "Trayectoria, colaboraciones, docencia y contacto",
         ca: "Trajectoria, col·laboracions, docencia i contacte",
@@ -1023,7 +1028,7 @@
     elements.bootChoices.forEach((button) => {
       if (button.dataset.bootChoice === "read") {
         button.innerHTML = mobileQuery.matches
-          ? "ENTRAR<small>Portfolio visual / piezas / bio</small>"
+          ? "ENTRAR<small>Portfolio visual / piezas / apoyos / bio</small>"
           : "Read Mode<small>Dossier first / clean reading</small>";
         button.dataset.bootDescription = mobileQuery.matches
           ? "Enter the mobile visual portfolio."

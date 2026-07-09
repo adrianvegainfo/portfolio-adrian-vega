@@ -850,6 +850,36 @@ body.interactive-mode .status-panel::before {
     #fff;
 }
 
+.folder[data-key="supports"] {
+  right: 8%;
+  bottom: 9%;
+  width: clamp(250px, 24vw, 360px);
+  min-height: 150px;
+  --folder-color: var(--green);
+  border-width: 3px;
+  border-radius: 12px 12px 44px 12px;
+  background:
+    radial-gradient(circle at 86% 22%, #080808 0 7px, transparent 8px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0 18%, transparent 18% 100%),
+    repeating-linear-gradient(90deg, var(--green), var(--green) 16px, #d8ff61 16px, #d8ff61 32px);
+  box-shadow: 9px 9px 0 #080808, 18px 18px 0 var(--blue);
+  transform: rotate(-1.2deg);
+  --breathe-speed: 8.1s;
+}
+
+.folder[data-key="supports"]::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  width: 54px;
+  height: 28px;
+  border: 2px solid #080808;
+  background:
+    linear-gradient(90deg, #080808 0 8px, transparent 8px 14px, #080808 14px 22px, transparent 22px),
+    #fffdf3;
+}
+
 .folder[data-key="bio"] {
   left: 18%;
   top: 41%;

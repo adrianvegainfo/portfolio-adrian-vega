@@ -1,7 +1,7 @@
 window.SAMPLING_CONTENT = {
   ui: {
     es: {
-      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Education Projects", "Bio"],
+      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Education Projects", "Apoyos", "Bio"],
       language: "Idioma",
       reading: "Modo lectura",
       desktop: "Modo interactivo",
@@ -26,14 +26,14 @@ window.SAMPLING_CONTENT = {
       fullPage: "Pagina completa",
       status: [
         "web profesional para GREC Pro",
-        "obras, pedagogia, bio y contacto",
+        "obras, pedagogia, apoyos, bio y contacto",
         "videos completos disponibles bajo peticion",
       ],
       hero:
         "Adrian Vega es coreografo, performer y artista visual. Su practica trabaja entre post Hip Hop, danza contemporanea, zapateado flamenco, sonido, imagen en movimiento y cuerpo como archivo.",
     },
     ca: {
-      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Education Projects", "Bio"],
+      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Education Projects", "Suports", "Bio"],
       language: "Idioma",
       reading: "Mode lectura",
       desktop: "Mode interactiu",
@@ -58,14 +58,14 @@ window.SAMPLING_CONTENT = {
       fullPage: "Pagina completa",
       status: [
         "web professional per a GREC Pro",
-        "obres, pedagogia, bio i contacte",
+        "obres, pedagogia, suports, bio i contacte",
         "videos complets disponibles sota peticio",
       ],
       hero:
         "Adrian Vega es coreograf, performer i artista visual. La seva practica treballa entre post Hip Hop, dansa contemporania, zapateado flamenc, so, imatge en moviment i cos com a arxiu.",
     },
     en: {
-      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Education Projects", "Bio"],
+      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Education Projects", "Supports", "Bio"],
       language: "Language",
       reading: "Read Mode",
       desktop: "Interactive Mode",
@@ -90,7 +90,7 @@ window.SAMPLING_CONTENT = {
       fullPage: "Full page",
       status: [
         "professional website for GREC Pro",
-        "works, education, bio and contact",
+        "works, education, supports, bio and contact",
         "full videos available on request",
       ],
       hero:
@@ -373,6 +373,70 @@ window.SAMPLING_CONTENT = {
               <figure><img src="./assets/mediation-sports-hall-installation.jpg" alt="Installation in sports hall"><figcaption>device / space</figcaption></figure>
               <figure><img src="./assets/mediation-analog-scroll-circle.jpg" alt="Analog scroll circle"><figcaption>analog scroll</figcaption></figure>
             </div>`,
+          },
+        ],
+      },
+    },
+    {
+      key: "supports",
+      label: { es: "Apoyos", ca: "Suports", en: "Supports" },
+      action: { es: "BECAS / CONTEXTOS", ca: "BEQUES / CONTEXTOS", en: "GRANTS / CONTEXTS" },
+      file: "SUPPORTS.contexts_residencies",
+      image: "./assets/seleccion-memoria.jpg",
+      tags: ["GRANTS", "DEVELOPMENT", "CO-PRODUCTION", "RESIDENCIES", "CONTEXTS"],
+      tabs: {
+        es: [
+          {
+            title: "Becas",
+            html: `<p>CLT019 Research and Innovation Grants, 2022 y 2023.</p><p>Apoyo del Institut Ramon Llull en procesos de internacionalizacion y circulacion artistica.</p>`,
+          },
+          {
+            title: "Desarrollo",
+            html: `<p>Contextos de desarrollo, mediacion y acompanamiento: Dansa Metropolitana, Institut del Teatre, Campus de les Arts, Parc Sandaru, Laboratorio Flamenco, BenAmil, Certamen Coreografico de Tetuan, programa.cat y Escena Xixon.</p><p>Estos apoyos atraviesan procesos escenicos, pedagogicos y de investigacion alrededor de cuerpo, archivo, sonido e imagen.</p>`,
+          },
+          {
+            title: "Coproducciones",
+            html: `<p><em>Inaudit</em>, creado con Adriano Galante, aparece vinculado a Festival Grec de Barcelona, Graner, Dansa Metropolitana y Escena Patrimonio.</p><p>En la trayectoria tambien aparecen ICUB, Mercat de les Flors, Antic Teatre, KVS Brussels, Fira Mediterrania y Festival Eufonic como instituciones y contextos de presentacion, colaboracion o seguimiento.</p>`,
+          },
+          {
+            title: "Residencias",
+            html: `<p><em>Los lunares del Puma</em> se desarrolla como residencia y proceso en La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> se desarrolla en residencia de investigacion en el Palacio de Cornellana, Gijon/Xixon, y abre las lineas posteriores de <em>Sampling</em>, <em>Buffering</em> e instalacion.</p><p><em>Inaudit</em> activa procesos situados en La Modelo, Segovia y Eufonic.</p>`,
+          },
+        ],
+        ca: [
+          {
+            title: "Beques",
+            html: `<p>CLT019 Research and Innovation Grants, 2022 i 2023.</p><p>Suport de l'Institut Ramon Llull en processos d'internacionalitzacio i circulacio artistica.</p>`,
+          },
+          {
+            title: "Desenvolupament",
+            html: `<p>Contextos de desenvolupament, mediacio i acompanyament: Dansa Metropolitana, Institut del Teatre, Campus de les Arts, Parc Sandaru, Laboratorio Flamenco, BenAmil, Certamen Coreografico de Tetuan, programa.cat i Escena Xixon.</p><p>Aquests suports travessen processos escenics, pedagogics i de recerca al voltant de cos, arxiu, so i imatge.</p>`,
+          },
+          {
+            title: "Coproduccions",
+            html: `<p><em>Inaudit</em>, creat amb Adriano Galante, apareix vinculat a Festival Grec de Barcelona, Graner, Dansa Metropolitana i Escena Patrimonio.</p><p>En la trajectoria tambe apareixen ICUB, Mercat de les Flors, Antic Teatre, KVS Brussels, Fira Mediterrania i Festival Eufonic com a institucions i contextos de presentacio, col.laboracio o seguiment.</p>`,
+          },
+          {
+            title: "Residencies",
+            html: `<p><em>Los lunares del Puma</em> es desenvolupa com a residencia i proces a La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> es desenvolupa en residencia de recerca al Palacio de Cornellana, Gijon/Xixon, i obre les linies posteriors de <em>Sampling</em>, <em>Buffering</em> i instal.lacio.</p><p><em>Inaudit</em> activa processos situats a La Modelo, Segovia i Eufonic.</p>`,
+          },
+        ],
+        en: [
+          {
+            title: "Grants",
+            html: `<p>CLT019 Research and Innovation Grants, 2022 and 2023.</p><p>Support from Institut Ramon Llull for internationalisation and artistic circulation processes.</p>`,
+          },
+          {
+            title: "Development",
+            html: `<p>Development, mediation and accompaniment contexts: Dansa Metropolitana, Institut del Teatre, Campus de les Arts, Parc Sandaru, Laboratorio Flamenco, BenAmil, Certamen Coreografico de Tetuan, programa.cat and Escena Xixon.</p><p>These supports cross stage, pedagogical and research processes around body, archive, sound and image.</p>`,
+          },
+          {
+            title: "Co-productions",
+            html: `<p><em>Inaudit</em>, created with Adriano Galante, is linked to Festival Grec de Barcelona, Graner, Dansa Metropolitana and Escena Patrimonio.</p><p>The wider trajectory also includes ICUB, Mercat de les Flors, Antic Teatre, KVS Brussels, Fira Mediterrania and Festival Eufonic as institutions and contexts of presentation, collaboration or follow-up.</p>`,
+          },
+          {
+            title: "Residencies",
+            html: `<p><em>Los lunares del Puma</em> was developed as a residency and process at La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> was developed during a research residency at Palacio de Cornellana, Gijon/Xixon, opening the later lines of <em>Sampling</em>, <em>Buffering</em> and installation.</p><p><em>Inaudit</em> activates situated processes at La Modelo, Segovia and Eufonic.</p>`,
           },
         ],
       },
