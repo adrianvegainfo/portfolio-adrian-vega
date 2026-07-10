@@ -1,6 +1,6 @@
 (() => {
   const CONTENT = window.SAMPLING_CONTENT;
-  const LANGUAGES = ["es", "ca", "en"];
+  const LANGUAGES = ["es", "ca", "en", "fr", "nl"];
   const STORAGE_PREFIX = "adrianPersonalV1:";
   const EDITOR_ALLOWED_HOSTS = ["127.0.0.1", "localhost", "::1"];
   const EDITOR_ENABLED = EDITOR_ALLOWED_HOSTS.includes(window.location.hostname);
@@ -450,36 +450,50 @@
         es: "Nueva creacion entre cuerpo, archivo, imagen y sonido",
         ca: "Nova creacio entre cos, arxiu, imatge i so",
         en: "New creation across body, archive, image and sound",
+        fr: "Nouvelle creation entre corps, archive, image et son",
+        nl: "Nieuwe creatie rond lichaam, archief, beeld en geluid",
       },
       puma: {
         es: "Solo performance, camara, footwork y diario fisico",
         ca: "Solo performance, camera, footwork i diari fisic",
         en: "Solo performance, camera, footwork and physical diary",
+        fr: "Solo performance, camera, footwork et journal physique",
+        nl: "Solo performance, camera, footwork en fysiek dagboek",
       },
       inaudit: {
         es: "Patrimonio sonoro, escucha y espacio como instrumento",
         ca: "Patrimoni sonor, escolta i espai com a instrument",
         en: "Sonic heritage, listening and space as instrument",
+        fr: "Patrimoine sonore, ecoute et espace comme instrument",
+        nl: "Sonisch erfgoed, luisteren en ruimte als instrument",
       },
       okey: {
         es: "Duo, suelo, impacto, ritmo compartido y error",
         ca: "Duo, terra, impacte, ritme compartit i error",
         en: "Duet, floor, impact, shared rhythm and error",
+        fr: "Duo, sol, impact, rythme partage et erreur",
+        nl: "Duet, vloer, impact, gedeeld ritme en fout",
       },
       education: {
         es: "Talleres de cuerpo, imagen y tecnologia cotidiana",
         ca: "Tallers de cos, imatge i tecnologia quotidiana",
         en: "Workshops across body, image and everyday technology",
+        fr: "Ateliers autour du corps, de l'image et de la technologie quotidienne",
+        nl: "Workshops rond lichaam, beeld en dagelijkse technologie",
       },
       supports: {
         es: "Becas, desarrollo, coproducciones y residencias",
         ca: "Beques, desenvolupament, coproduccions i residencies",
         en: "Grants, development, co-productions and residencies",
+        fr: "Bourses, developpement, coproductions et residences",
+        nl: "Beurzen, ontwikkeling, coproducties en residenties",
       },
       bio: {
         es: "Trayectoria, colaboraciones, docencia y contacto",
         ca: "Trajectoria, col·laboracions, docencia i contacte",
         en: "Trajectory, collaborations, teaching and contact",
+        fr: "Parcours, collaborations, enseignement et contact",
+        nl: "Traject, samenwerkingen, onderwijs en contact",
       },
     };
     return copy[folder.key]?.[state.lang] || copy[folder.key]?.en || folder.file;
@@ -1001,6 +1015,7 @@
     state.lang = lang;
     localStorage.setItem(`${STORAGE_PREFIX}lang`, lang);
     renderAll();
+    refreshBootChoices();
   }
 
   function toggleReading() {
@@ -1037,19 +1052,67 @@
 
   function refreshBootChoices() {
     const recommendedMode = mobileQuery.matches ? "read" : "interactive";
+    const bootCopy = {
+      es: {
+        mobileHint: "Toca para entrar en el portfolio visual movil.",
+        desktopHint: "Recomendado aqui: Modo interactivo. Empieza con la app-performance de escritorio.",
+        enter: "ENTRAR",
+        mobileSmall: "Portfolio visual / piezas / apoyos / bio",
+        read: "Modo lectura",
+        readSmall: "Dossier primero / lectura limpia",
+        readDescription: "Empieza con el dossier completo. Mas claro para movil, lectura y envio.",
+      },
+      ca: {
+        mobileHint: "Toca per entrar al portfolio visual mobil.",
+        desktopHint: "Recomanat aqui: Mode interactiu. Comenca amb l'app-performance d'escriptori.",
+        enter: "ENTRAR",
+        mobileSmall: "Portfolio visual / peces / suports / bio",
+        read: "Mode lectura",
+        readSmall: "Dossier primer / lectura neta",
+        readDescription: "Comenca amb el dossier complet. Mes clar per a mobil, lectura i enviament.",
+      },
+      en: {
+        mobileHint: "Tap to enter the mobile visual portfolio.",
+        desktopHint: "Recommended here: Interactive Mode. Start with the desktop app-performance.",
+        enter: "ENTER",
+        mobileSmall: "Visual portfolio / works / supports / bio",
+        read: "Read Mode",
+        readSmall: "Dossier first / clean reading",
+        readDescription: "Start with the complete dossier. Clearer for mobile, reading and sending.",
+      },
+      fr: {
+        mobileHint: "Touchez pour entrer dans le portfolio visuel mobile.",
+        desktopHint: "Recommande ici : Mode interactif. Commencez par l'app-performance de bureau.",
+        enter: "ENTRER",
+        mobileSmall: "Portfolio visuel / pieces / soutiens / bio",
+        read: "Mode lecture",
+        readSmall: "Dossier d'abord / lecture claire",
+        readDescription: "Commencez par le dossier complet. Plus clair pour mobile, lecture et envoi.",
+      },
+      nl: {
+        mobileHint: "Tik om het mobiele visuele portfolio te openen.",
+        desktopHint: "Aanbevolen hier: Interactieve modus. Start met de desktop app-performance.",
+        enter: "OPENEN",
+        mobileSmall: "Visueel portfolio / werken / steun / bio",
+        read: "Leesmodus",
+        readSmall: "Dossier eerst / helder lezen",
+        readDescription: "Start met het volledige dossier. Helderder voor mobiel, lezen en versturen.",
+      },
+    };
+    const copy = bootCopy[state.lang] || bootCopy.en;
     const defaultHint =
       recommendedMode === "read"
-        ? "Tap to enter the mobile visual portfolio."
-        : "Recommended here: Interactive Mode. Start with the desktop app-performance.";
+        ? copy.mobileHint
+        : copy.desktopHint;
     if (elements.bootHint) elements.bootHint.textContent = defaultHint;
     elements.bootChoices.forEach((button) => {
       if (button.dataset.bootChoice === "read") {
         button.innerHTML = mobileQuery.matches
-          ? "ENTRAR<small>Portfolio visual / piezas / apoyos / bio</small>"
-          : "Read Mode<small>Dossier first / clean reading</small>";
+          ? `${copy.enter}<small>${copy.mobileSmall}</small>`
+          : `${copy.read}<small>${copy.readSmall}</small>`;
         button.dataset.bootDescription = mobileQuery.matches
-          ? "Enter the mobile visual portfolio."
-          : "Start with the complete dossier. Clearer for mobile, reading and sending.";
+          ? copy.mobileHint
+          : copy.readDescription;
       }
       button.classList.toggle("is-recommended", button.dataset.bootChoice === recommendedMode);
     });

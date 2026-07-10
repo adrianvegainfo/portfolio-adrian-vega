@@ -96,6 +96,70 @@ window.SAMPLING_CONTENT = {
       hero:
         "Adrian Vega is a choreographer, performer and visual artist working across post Hip Hop, contemporary dance, flamenco footwork, sound, moving image and the body as archive.",
     },
+    fr: {
+      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Projets educatifs", "Soutiens", "Bio"],
+      language: "Langue",
+      reading: "Mode lecture",
+      desktop: "Mode interactif",
+      performance: "Dark mode",
+      archive: "Mode archive",
+      shuffle: "Deplacer le bureau",
+      open: "Ouvrir",
+      close: "Fermer",
+      edit: "Editer",
+      exitEdit: "Sortir de l'edition",
+      save: "Enregistrer",
+      export: "Exporter",
+      import: "Importer",
+      restore: "Restaurer",
+      view: "Vue",
+      editing: "Edition",
+      saved: "Enregistre",
+      imported: "Importe",
+      exported: "Exporte",
+      readAll: "Lire le dossier complet",
+      briefView: "Vue breve",
+      fullPage: "Page complete",
+      status: [
+        "site professionnel pour GREC Pro",
+        "pieces, pedagogie, soutiens, bio et contact",
+        "videos completes disponibles sur demande",
+      ],
+      hero:
+        "Adrian Vega est choregraphe, performer et artiste visuel. Sa pratique traverse le post Hip Hop, la danse contemporaine, le zapateado flamenco, le son, l'image en mouvement et le corps comme archive.",
+    },
+    nl: {
+      nav: ["Sampling", "Los lunares del Puma", "Inaudit", "We Are Just Okey", "Educatieve projecten", "Steun", "Bio"],
+      language: "Taal",
+      reading: "Leesmodus",
+      desktop: "Interactieve modus",
+      performance: "Dark mode",
+      archive: "Archiefmodus",
+      shuffle: "Bureaublad verplaatsen",
+      open: "Openen",
+      close: "Sluiten",
+      edit: "Bewerken",
+      exitEdit: "Bewerking sluiten",
+      save: "Opslaan",
+      export: "Exporteren",
+      import: "Importeren",
+      restore: "Herstellen",
+      view: "Weergave",
+      editing: "Bewerken",
+      saved: "Opgeslagen",
+      imported: "Geimporteerd",
+      exported: "Geexporteerd",
+      readAll: "Volledig dossier lezen",
+      briefView: "Korte weergave",
+      fullPage: "Volledige pagina",
+      status: [
+        "professionele website voor GREC Pro",
+        "werken, pedagogie, steun, bio en contact",
+        "volledige videos beschikbaar op aanvraag",
+      ],
+      hero:
+        "Adrian Vega is choreograaf, performer en visueel kunstenaar. Zijn praktijk beweegt tussen post Hip Hop, hedendaagse dans, flamenco footwork, geluid, bewegend beeld en het lichaam als archief.",
+    },
   },
   folders: [
     {
@@ -495,3 +559,232 @@ window.SAMPLING_CONTENT = {
     },
   ],
 };
+
+(() => {
+  const folders = Object.fromEntries(window.SAMPLING_CONTENT.folders.map((folder) => [folder.key, folder]));
+
+  Object.assign(folders.sampling.label, { fr: "Sampling", nl: "Sampling" });
+  Object.assign(folders.sampling.action, { fr: "NOUVELLE CREATION", nl: "NIEUWE CREATIE" });
+  folders.sampling.tabs.fr = [
+    {
+      title: "Projet",
+      html: `<p><em>Sampling</em> habite l'impossibilite pour un seul corps de construire une contre-archive de la mosaique culturelle de la Peninsule Iberique en tension avec l'idee d'identite espagnole.</p><p>La piece part d'une intuition physique : toute identite collective se construit aussi a travers le corps. Avant de devenir recit, tradition, drapeau ou memoire officielle, une identite s'apprend dans la posture, le rythme, la maniere de marcher, de regarder, de se taire, de frapper le sol, d'occuper l'espace ou de se retenir.</p><p>Le corps garde des formes d'appartenance transmises par la famille, le football, le flamenco, la television, la fete, la discipline et le desir. A travers des operations propres au sampling, comme couper, repeter, deplacer, superposer et recomposer, la piece travaille le corps, son image et sa sonorite pour construire une archive en transformation.</p><p>A l'horizon des cinquante ans des premieres elections democratiques de 1977 et de la Constitution de 1978, <em>Sampling</em> se situe entre celebration et question. Elle celebre les libertes recues tout en reecoutant les corps, cultures, memoires et contradictions qui composent une identite encore en construction.</p>`,
+    },
+    {
+      title: "Scene",
+      html: `<p>L'espace se construit devant le public avec cameras, projection, mylar, cables, chaussures, ballon, microphones et surfaces de lumiere. Le corps organise le dispositif, disparait dans l'image et revient comme presence physique, archive et son.</p><p>La recherche actuelle affine une structure scenique entre installation, choregraphie et concert corporel.</p>`,
+    },
+    {
+      title: "Materiel professionnel",
+      html: `<p><a href="https://www.youtube.com/watch?v=pkP5lEjQFqI" target="_blank" rel="noreferrer">Teaser de recherche</a></p><p><a href="https://www.youtube.com/watch?v=EcxniVksw6E" target="_blank" rel="noreferrer">Recap Digital Bodies</a></p><p>Video complete, dossier technique et conversation autour de la presentation disponibles sur demande.</p>`,
+    },
+  ];
+  folders.sampling.tabs.nl = [
+    {
+      title: "Project",
+      html: `<p><em>Sampling</em> bewoont de onmogelijkheid dat een enkel lichaam een tegenarchief bouwt van het culturele mozaiek van het Iberisch Schiereiland, in spanning met het idee van Spaanse identiteit.</p><p>Het stuk vertrekt vanuit een fysieke intuitie: elke collectieve identiteit wordt ook via het lichaam opgebouwd. Voordat identiteit verhaal, traditie, vlag of officieel geheugen wordt, wordt ze geleerd in houding, ritme, manieren van lopen, kijken, zwijgen, de vloer slaan, ruimte innemen of zich inhouden.</p><p>Het lichaam bewaart vormen van toebehoren die worden doorgegeven via familie, voetbal, flamenco, televisie, feest, discipline en verlangen. Via sampling-operaties zoals knippen, herhalen, verschuiven, over elkaar leggen en opnieuw componeren werkt het stuk met het lichaam, zijn beeld en zijn klank om een archief in transformatie te bouwen.</p><p>Met de vijftigste verjaardag van de eerste democratische verkiezingen van 1977 en de Grondwet van 1978 aan de horizon bevindt <em>Sampling</em> zich tussen viering en vraag. Het viert ontvangen vrijheden terwijl het opnieuw luistert naar de lichamen, culturen, herinneringen en tegenstrijdigheden die een identiteit vormen die nog in opbouw is.</p>`,
+    },
+    {
+      title: "Scene",
+      html: `<p>De ruimte wordt voor het publiek opgebouwd met camera's, projectie, mylar, kabels, schoenen, een bal, microfoons en lichtvlakken. Het lichaam organiseert het apparaat, verdwijnt in het beeld en keert terug als fysieke aanwezigheid, archief en geluid.</p><p>Het huidige onderzoek verfijnt een scenische structuur tussen installatie, choreografie en lichamelijk concert.</p>`,
+    },
+    {
+      title: "Professioneel materiaal",
+      html: `<p><a href="https://www.youtube.com/watch?v=pkP5lEjQFqI" target="_blank" rel="noreferrer">Onderzoeksteaser</a></p><p><a href="https://www.youtube.com/watch?v=EcxniVksw6E" target="_blank" rel="noreferrer">Digital Bodies recap</a></p><p>Volledige video, technisch dossier en gesprek over presentatie beschikbaar op aanvraag.</p>`,
+    },
+  ];
+
+  Object.assign(folders.puma.label, { fr: "Los lunares del Puma", nl: "Los lunares del Puma" });
+  Object.assign(folders.puma.action, { fr: "SOLO / JOURNAL / RYTHME", nl: "SOLO / DAGBOEK / RITME" });
+  folders.puma.tabs.fr = [
+    {
+      title: "Piece",
+      html: `<p><em>Los lunares del Puma</em> nait de l'ecoute de mon propre son et d'un heritage corporel entre Hip Hop, folklore, zapateado flamenco et danse contemporaine.</p><p>Le projet fonctionne comme performance vlog, journal physique et processus scenique ou la camera accompagne le corps et transforme le processus en matiere artistique.</p>`,
+    },
+    {
+      title: "Recherche",
+      html: `<p>La piece ouvre une ligne autour des danses d'aller-retour : techniques, rythmes et gestes qui changent d'accent lorsqu'ils traversent corps, territoires et imaginaires populaires.</p><p>Le zapateado apparait comme materiau rythmique, memoire heritee et outil pour penser identite, style et autorat corporel.</p>`,
+    },
+    {
+      title: "Materiel professionnel",
+      html: `<p><a href="https://www.youtube.com/watch?v=3dWio72gp3c" target="_blank" rel="noreferrer">Teaser de El diario del Puma</a></p><p><a href="https://www.lacaldera.info/es/publicaciones/el-diario-del-puma" target="_blank" rel="noreferrer">Publication a La Caldera</a></p><p>Version complete et contexte de programmation disponibles sur demande.</p>`,
+    },
+  ];
+  folders.puma.tabs.nl = [
+    {
+      title: "Stuk",
+      html: `<p><em>Los lunares del Puma</em> ontstaat uit het luisteren naar mijn eigen geluid en naar een lichamelijke erfenis tussen Hip Hop, folklore, flamenco footwork en hedendaagse dans.</p><p>Het project werkt als performance vlog, fysiek dagboek en scenisch proces waarin de camera het lichaam begeleidt en het proces artistiek materiaal wordt.</p>`,
+    },
+    {
+      title: "Onderzoek",
+      html: `<p>Het stuk opent een lijn rond ida y vuelta-dansen: technieken, ritmes en gebaren die van accent veranderen wanneer ze lichamen, gebieden en populaire verbeeldingen doorkruisen.</p><p>Footwork verschijnt als ritmisch materiaal, geerfd geheugen en instrument om identiteit, stijl en lichamelijk auteurschap te denken.</p>`,
+    },
+    {
+      title: "Professioneel materiaal",
+      html: `<p><a href="https://www.youtube.com/watch?v=3dWio72gp3c" target="_blank" rel="noreferrer">Teaser van El diario del Puma</a></p><p><a href="https://www.lacaldera.info/es/publicaciones/el-diario-del-puma" target="_blank" rel="noreferrer">Publicatie bij La Caldera</a></p><p>Volledige versie en programmeringscontext beschikbaar op aanvraag.</p>`,
+    },
+  ];
+
+  Object.assign(folders.inaudit.label, { fr: "Inaudit", nl: "Inaudit" });
+  Object.assign(folders.inaudit.action, { fr: "SON / PATRIMOINE", nl: "GELUID / ERFGOED" });
+  folders.inaudit.tabs.fr = [
+    {
+      title: "Piece",
+      html: `<p><em>Inaudit</em>, cree avec Adriano Galante, explore la memoire sonore inaudible cachee dans le patrimoine.</p><p>Le projet transforme l'espace en instrument musical et en archive sensible, a travers l'ecoute, les dispositifs Soma, le corps, la resonance et la dramaturgie sonore.</p>`,
+    },
+    {
+      title: "Processus",
+      html: `<p>Une de ses phases se developpe a La Model, ancienne prison de Barcelone, et a La Barceloneta, ou l'architecture, le quartier et la memoire materielle s'ecoutent comme un champ sensible. Le projet prend ensuite une forme scenique a Antic Teatre.</p><p>L'experience permet de penser comment une recherche technique et perceptive peut se transformer en mise en scene.</p>`,
+    },
+    {
+      title: "Materiel professionnel",
+      html: `<p><a href="https://www.youtube.com/watch?v=h5QRH1IsxVc" target="_blank" rel="noreferrer">Extrait public</a></p><p>Video complete et details d'adaptation a l'espace disponibles sur demande.</p>`,
+    },
+  ];
+  folders.inaudit.tabs.nl = [
+    {
+      title: "Stuk",
+      html: `<p><em>Inaudit</em>, gemaakt met Adriano Galante, onderzoekt het onhoorbare sonische geheugen dat verborgen ligt in erfgoed.</p><p>Het project verandert ruimte in een muziekinstrument en gevoelig archief, via luisteren, Soma-apparaten, lichaam, resonantie en sonische dramaturgie.</p>`,
+    },
+    {
+      title: "Proces",
+      html: `<p>Een fase vindt plaats in La Model, de voormalige gevangenis van Barcelona, en in La Barceloneta, waar architectuur, wijk en materieel geheugen worden beluisterd als een gevoelig veld. Daarna krijgt het project een scenische vorm in Antic Teatre.</p><p>De ervaring opent een manier om te begrijpen hoe technisch en perceptief onderzoek enscenering kan worden.</p>`,
+    },
+    {
+      title: "Professioneel materiaal",
+      html: `<p><a href="https://www.youtube.com/watch?v=h5QRH1IsxVc" target="_blank" rel="noreferrer">Publiek fragment</a></p><p>Volledige video en details voor aanpassing aan ruimte beschikbaar op aanvraag.</p>`,
+    },
+  ];
+
+  Object.assign(folders.okey.label, { fr: "We Are Just Okey", nl: "We Are Just Okey" });
+  Object.assign(folders.okey.action, { fr: "DUO / SOL / ERREUR", nl: "DUET / VLOER / FOUT" });
+  folders.okey.tabs.fr = [
+    {
+      title: "Piece",
+      html: `<p><em>We Are Just Okey</em> est un projet scenique autour de la chute, de l'impact, du sol, du jeu, de l'erreur et du zapateado.</p><p>La piece contient une premiere relation entre corps, rythme, accident, pedagogie et scene, qui revient ensuite transformee dans des recherches posterieures.</p>`,
+    },
+    {
+      title: "Materialite",
+      html: `<p>Le travail part de coordinations physiques, du dialogue entre corps, de la precision rythmique, des techniques de sol et de l'impact comme forme d'ecoute.</p><p>Son interet actuel dans le site est genealogique : il permet de lire d'ou viennent certaines obsessions qui traversent <em>Los lunares del Puma</em> et <em>Sampling</em>.</p>`,
+    },
+    {
+      title: "Materiel professionnel",
+      html: `<p><a href="https://youtu.be/uGa9oe7glzI" target="_blank" rel="noreferrer">Teaser public</a></p><p>Version complete disponible sur demande.</p>`,
+    },
+  ];
+  folders.okey.tabs.nl = [
+    {
+      title: "Stuk",
+      html: `<p><em>We Are Just Okey</em> is een scenisch project rond vallen, impact, vloer, spel, fout en footwork.</p><p>Het stuk bevat een vroege relatie tussen lichaam, ritme, ongeluk, pedagogie en scene, die later getransformeerd terugkeert in ander onderzoek.</p>`,
+    },
+    {
+      title: "Materialiteit",
+      html: `<p>Het werk vertrekt vanuit fysieke coordinaties, dialoog tussen lichamen, ritmische precisie, vloertechnieken en impact als vorm van luisteren.</p><p>De huidige plaats op de website is genealogisch: het laat zien waar enkele zorgen vandaan komen die <em>Los lunares del Puma</em> en <em>Sampling</em> doorkruisen.</p>`,
+    },
+    {
+      title: "Professioneel materiaal",
+      html: `<p><a href="https://youtu.be/uGa9oe7glzI" target="_blank" rel="noreferrer">Publieke teaser</a></p><p>Volledige versie beschikbaar op aanvraag.</p>`,
+    },
+  ];
+
+  Object.assign(folders.education.label, { fr: "Projets educatifs", nl: "Educatieve projecten" });
+  Object.assign(folders.education.action, { fr: "PEDAGOGIE / ATELIERS", nl: "PEDAGOGIE / WORKSHOPS" });
+  folders.education.tabs.fr = [
+    {
+      title: "Ligne",
+      html: `<p>Les projets pedagogiques d'Adrian Vega prolongent sa recherche scenique vers des contextes educatifs, des jeunes publics, la mediation culturelle et des processus de creation partagee.</p><p>Le travail croise corps, camera, telephones, ecrans, microphones, projection, rythme et composition pour activer une relation critique et creative avec la technologie quotidienne.</p>`,
+    },
+    {
+      title: "Formats",
+      html: `<p>Ateliers de mouvement, laboratoires corps-image, processus de creation avec des etablissements scolaires, sessions pour danseurs et accompagnement de projets lies au corps, a l'archive, au son et a l'image.</p><p>La methodologie s'adapte aux ages, a l'espace, a la duree et aux objectifs de chaque contexte.</p>`,
+    },
+    {
+      title: "Galerie",
+      html: folders.education.tabs.en[2].html,
+    },
+  ];
+  folders.education.tabs.nl = [
+    {
+      title: "Lijn",
+      html: `<p>De pedagogische projecten van Adrian Vega verlengen zijn scenisch onderzoek naar educatieve contexten, jongeren, culturele bemiddeling en gedeelde creatieprocessen.</p><p>Het werk kruist lichaam, camera, telefoons, schermen, microfoons, projectie, ritme en compositie om een kritische en creatieve relatie met dagelijkse technologie te activeren.</p>`,
+    },
+    {
+      title: "Formaten",
+      html: `<p>Bewegingsworkshops, laboratoria rond lichaam en beeld, creatieprocessen met scholen, sessies voor dansers en begeleiding van projecten rond lichaam, archief, geluid en beeld.</p><p>De methodologie past zich aan leeftijd, ruimte, duur en doelstellingen van elke context aan.</p>`,
+    },
+    {
+      title: "Galerij",
+      html: folders.education.tabs.en[2].html,
+    },
+  ];
+
+  Object.assign(folders.supports.label, { fr: "Soutiens", nl: "Steun" });
+  Object.assign(folders.supports.action, { fr: "BOURSES / CONTEXTES", nl: "BEURZEN / CONTEXTEN" });
+  folders.supports.tabs.fr = [
+    {
+      title: "Bourses",
+      html: `<p>CLT019 Research and Innovation Grants, 2022 et 2023.</p><p>Soutien de l'Institut Ramon Llull pour des processus d'internationalisation et de circulation artistique.</p>`,
+    },
+    {
+      title: "Developpement",
+      html: `<p>Contextes de developpement, mediation et accompagnement : Dansa Metropolitana, Institut del Teatre, Campus de les Arts, Parc Sandaru, Laboratorio Flamenco, BenAmil, Certamen Coreografico de Tetuan, programa.cat et Escena Xixon.</p><p>Ces soutiens traversent des processus sceniques, pedagogiques et de recherche autour du corps, de l'archive, du son et de l'image.</p>`,
+    },
+    {
+      title: "Coproductions",
+      html: `<p><em>Inaudit</em>, cree avec Adriano Galante, est lie a Festival Grec de Barcelona, Graner, Dansa Metropolitana et Escena Patrimonio.</p><p>Le parcours inclut aussi ICUB, Mercat de les Flors, Antic Teatre, KVS Brussels, Fira Mediterrania et Festival Eufonic comme institutions et contextes de presentation, collaboration ou suivi.</p>`,
+    },
+    {
+      title: "Residences",
+      html: `<p><em>Los lunares del Puma</em> se developpe comme residence et processus a La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> se developpe lors d'une residence de recherche au Palacio de Cornellana, Gijon/Xixon, et ouvre les lignes posterieures de <em>Sampling</em>, <em>Buffering</em> et de l'installation.</p><p><em>Inaudit</em> active des processus situes a La Modelo, La Barceloneta, Segovia et Eufonic.</p>`,
+    },
+  ];
+  folders.supports.tabs.nl = [
+    {
+      title: "Beurzen",
+      html: `<p>CLT019 Research and Innovation Grants, 2022 en 2023.</p><p>Steun van Institut Ramon Llull voor internationalisering en artistieke circulatie.</p>`,
+    },
+    {
+      title: "Ontwikkeling",
+      html: `<p>Contexten voor ontwikkeling, bemiddeling en begeleiding: Dansa Metropolitana, Institut del Teatre, Campus de les Arts, Parc Sandaru, Laboratorio Flamenco, BenAmil, Certamen Coreografico de Tetuan, programa.cat en Escena Xixon.</p><p>Deze steun loopt door scenische, pedagogische en onderzoeksprocessen rond lichaam, archief, geluid en beeld.</p>`,
+    },
+    {
+      title: "Coproducties",
+      html: `<p><em>Inaudit</em>, gemaakt met Adriano Galante, is verbonden met Festival Grec de Barcelona, Graner, Dansa Metropolitana en Escena Patrimonio.</p><p>Het bredere traject omvat ook ICUB, Mercat de les Flors, Antic Teatre, KVS Brussels, Fira Mediterrania en Festival Eufonic als instellingen en contexten voor presentatie, samenwerking of opvolging.</p>`,
+    },
+    {
+      title: "Residenties",
+      html: `<p><em>Los lunares del Puma</em> werd ontwikkeld als residentie en proces bij La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> werd ontwikkeld tijdens een onderzoeksresidentie in Palacio de Cornellana, Gijon/Xixon, en opent de latere lijnen van <em>Sampling</em>, <em>Buffering</em> en installatie.</p><p><em>Inaudit</em> activeert gesitueerde processen in La Modelo, La Barceloneta, Segovia en Eufonic.</p>`,
+    },
+  ];
+
+  Object.assign(folders.bio.label, { fr: "Bio", nl: "Bio" });
+  Object.assign(folders.bio.action, { fr: "BIO / CONTACT", nl: "BIO / CONTACT" });
+  folders.bio.tabs.fr = [
+    {
+      title: "Bio courte",
+      html: `<p>Adrian Vega est choregraphe, performer et artiste visuel forme a l'Institut del Teatre de Barcelone. Sa pratique rassemble Hip Hop, danse contemporaine et flamenco a travers l'articulation rythmique, les techniques de sol, l'inversion et la composition instantanee.</p><p>Il aborde le corps comme une archive de rythmes, gestes et croisements culturels.</p>`,
+    },
+    {
+      title: "Parcours",
+      html: `<p>Ses travaux personnels incluent <em>We Are Just Okey</em>, <em>Los lunares del Puma</em>, <em>Inaudit</em>, <em>Digital Bodies: Echo & Delay</em> et <em>Sampling</em>.</p><p>Il a travaille avec Iron Skulls Co, Jazzbetween, Juan Carlos Lerida et Tangelbenzal. De 2017 a 2023, il a ete professeur invite au Conservatoire Professionnel de Danse de l'Institut del Teatre de Barcelone.</p>`,
+    },
+    {
+      title: "Contact",
+      html: `<p><a href="mailto:adrianvegainfo@gmail.com">adrianvegainfo@gmail.com</a></p><p><a href="https://adrianvega.art/" target="_blank" rel="noreferrer">adrianvega.art</a></p><p><a href="https://adrianvegainfo.github.io/portfolio-adrian-vega/#trajectory" target="_blank" rel="noreferrer">Portfolio de lecture</a></p>`,
+    },
+  ];
+  folders.bio.tabs.nl = [
+    {
+      title: "Korte bio",
+      html: `<p>Adrian Vega is choreograaf, performer en visueel kunstenaar, opgeleid aan het Institut del Teatre in Barcelona. Zijn bewegingspraktijk brengt Hip Hop, hedendaagse dans en flamenco samen via ritmische articulatie, vloertechnieken, inversie en instant compositie.</p><p>Hij benadert het lichaam als een archief van ritmes, gebaren en culturele kruisingen.</p>`,
+    },
+    {
+      title: "Traject",
+      html: `<p>Zijn eigen werken omvatten <em>We Are Just Okey</em>, <em>Los lunares del Puma</em>, <em>Inaudit</em>, <em>Digital Bodies: Echo & Delay</em> en <em>Sampling</em>.</p><p>Hij werkte met Iron Skulls Co, Jazzbetween, Juan Carlos Lerida en Tangelbenzal. Van 2017 tot 2023 was hij gastdocent aan het Professional Dance Conservatory van het Institut del Teatre in Barcelona.</p>`,
+    },
+    {
+      title: "Contact",
+      html: `<p><a href="mailto:adrianvegainfo@gmail.com">adrianvegainfo@gmail.com</a></p><p><a href="https://adrianvega.art/" target="_blank" rel="noreferrer">adrianvega.art</a></p><p><a href="https://adrianvegainfo.github.io/portfolio-adrian-vega/#trajectory" target="_blank" rel="noreferrer">Leesportfolio</a></p>`,
+    },
+  ];
+})();
