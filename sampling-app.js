@@ -344,6 +344,18 @@
         localStorage.setItem(key, value.replace(from, to));
       }
     });
+
+    const supportsImageRevisionKey = `${STORAGE_PREFIX}supportsImageRevision:20260710`;
+    if (!localStorage.getItem(supportsImageRevisionKey)) {
+      ["reading-image-supports", "window-image-supports"].forEach((id) => {
+        const key = imageKey(id);
+        const value = localStorage.getItem(key);
+        if (value && !value.includes("supports-institutions.svg")) {
+          localStorage.setItem(key, "./assets/supports-institutions.svg");
+        }
+      });
+      localStorage.setItem(supportsImageRevisionKey, "true");
+    }
   }
 
   function setEditorStatus(message) {
