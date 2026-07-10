@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Sampling | Mobile links | Adrian Vega</title>
+    <meta name="description" content="Sampling mobile access: teaser, Grec Pro dossier, Adrian Vega's website and contact.">
+    <meta property="og:title" content="Sampling | Adrian Vega">
+    <meta property="og:description" content="Teaser, Grec Pro dossier, website and contact.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.adrianvega.art/grec-pro/mobile/">
+    <meta property="og:image" content="https://www.adrianvega.art/grec-pro/assets/sampling-grec-pro-mobile-links.png">
+    <link rel="canonical" href="https://www.adrianvega.art/grec-pro/mobile/">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        display: grid;
+        min-height: 100svh;
+        place-items: start center;
+        margin: 0;
+        overflow-x: hidden;
+        background: #050505;
+        color: #fffdf3;
+        font-family: "Courier New", Courier, monospace;
+        letter-spacing: 0;
+      }
+
+      .poster {
+        position: relative;
+        width: min(100vw, 675px);
+        aspect-ratio: 9 / 16;
+        background: #050505;
+      }
+
+      .poster-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .hotspot {
+        position: absolute;
+        z-index: 2;
+        border: 0;
+        color: transparent;
+        text-decoration: none;
+        -webkit-tap-highlight-color: rgba(199, 255, 24, 0.35);
+      }
+
+      .hotspot:hover,
+      .hotspot:focus-visible {
+        outline: 3px solid #c7ff18;
+        outline-offset: 2px;
+        background: rgba(199, 255, 24, 0.12);
+      }
+
+      .teaser {
+        top: 12.7%;
+        left: 5.7407%;
+        width: 11.8519%;
+        height: 7%;
+      }
+
+      .dossier {
+        top: 12.7%;
+        left: 18.7037%;
+        width: 13.3333%;
+        height: 7%;
+      }
+
+      .website {
+        top: 12.7%;
+        left: 33.1481%;
+        width: 13.3333%;
+        height: 7%;
+      }
+
+      .contact {
+        top: 12.7%;
+        left: 47.5926%;
+        width: 13.2407%;
+        height: 7%;
+      }
+
+      .qr-link {
+        top: 78.3854%;
+        left: 36.6667%;
+        width: 26.6667%;
+        height: 17.2917%;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+
+      @media (min-aspect-ratio: 9 / 16) {
+        .poster {
+          width: auto;
+          height: 100svh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster" aria-label="Sampling mobile access">
+      <img
+        class="poster-image"
+        src="../assets/sampling-grec-pro-mobile-links.png"
+        alt="Sampling by Adrian Vega, with links to teaser, dossier, website and contact, and a QR code"
+        width="1080"
+        height="1920"
+      >
+
+      <a
+        class="hotspot teaser"
+        href="https://www.youtube.com/watch?v=pkP5lEjQFqI"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Watch the Sampling teaser"
+      ><span class="sr-only">Teaser</span></a>
+
+      <a
+        class="hotspot dossier"
+        href="https://www.adrianvega.art/grec-pro/"
+        aria-label="Open the Sampling Grec Pro dossier"
+      ><span class="sr-only">Dossier</span></a>
+
+      <a
+        class="hotspot website"
+        href="https://www.adrianvega.art/"
+        aria-label="Open Adrian Vega's website"
+      ><span class="sr-only">Website</span></a>
+
+      <a
+        class="hotspot contact"
+        href="mailto:adrianvegainfo@gmail.com?subject=Sampling%20Grec%20Pro"
+        aria-label="Contact Adrian Vega about Sampling"
+      ><span class="sr-only">Contact</span></a>
+
+      <a
+        class="hotspot qr-link"
+        href="https://www.adrianvega.art/grec-pro/"
+        aria-label="Open the Sampling Grec Pro dossier"
+      ><span class="sr-only">Open dossier</span></a>
+    </main>
+  </body>
+</html>
