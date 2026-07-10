@@ -1193,6 +1193,14 @@ body.reading-mode .reading-view {
   pointer-events: none;
 }
 
+.presentation-preview-empty {
+  background:
+    linear-gradient(90deg, rgba(185, 255, 0, 0.7) 0 2px, transparent 2px 100%),
+    linear-gradient(0deg, rgba(185, 255, 0, 0.7) 0 2px, transparent 2px 100%),
+    #080808;
+  background-size: 42px 42px;
+}
+
 .presentation-link {
   position: absolute;
   inset: 0;
@@ -1606,6 +1614,10 @@ body.reading-mode .reading-view {
   display: grid;
   align-content: start;
   gap: 12px;
+}
+
+.window-side-tags-only {
+  align-content: end;
 }
 
 .window-side img,

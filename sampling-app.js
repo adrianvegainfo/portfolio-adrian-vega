@@ -569,7 +569,9 @@
   function renderReading() {
     const presentationCards = CONTENT.folders
       .map((folder) => {
-        const media = folder.video
+        const media = folder.noMedia
+          ? `<div class="presentation-preview presentation-preview-empty" aria-hidden="true"></div>`
+          : folder.video
           ? `<div class="presentation-preview">${previewFrame(folder.video, `${folder.label[state.lang]} preview`)}</div>`
           : `<div class="presentation-preview"><img src="${folder.image}" alt="${folder.label[state.lang]}"></div>`;
         return `<article class="presentation-card">
@@ -587,7 +589,9 @@
       .join("");
     const sections = CONTENT.folders
       .map((folder) => {
-        const media = folder.video
+        const media = folder.noMedia
+          ? ""
+          : folder.video
           ? `<div class="reading-media">${teaserFrame(folder.video, `${folder.label[state.lang]} teaser`)}</div>`
           : `<div class="reading-media"><img src="${folder.image}" alt="${folder.label[state.lang]}" data-edit-image data-edit-id="reading-image-${folder.key}"></div>`;
         const tabs = folder.tabs[state.lang]
@@ -694,6 +698,7 @@
   }
 
   function mediaMarkup(folder, activeTab = 0) {
+    if (folder.noMedia) return "";
     const id = `window-image-${folder.key}`;
     if (folder.video) {
       return `<iframe
@@ -727,7 +732,7 @@
         </div>
         <div class="window-tab-content" data-edit-text data-edit-id="content-${folder.key}-${win.dataset.activeTab}">${tab.html}</div>
       </div>
-      <aside class="window-side">
+      <aside class="window-side${folder.noMedia ? " window-side-tags-only" : ""}">
         ${mediaMarkup(folder, Number(win.dataset.activeTab))}
         <div class="window-tags">${folder.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
       </aside>

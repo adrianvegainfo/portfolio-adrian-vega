@@ -382,7 +382,7 @@ window.SAMPLING_CONTENT = {
       label: { es: "Apoyos", ca: "Suports", en: "Supports" },
       action: { es: "BECAS / CONTEXTOS", ca: "BEQUES / CONTEXTOS", en: "GRANTS / CONTEXTS" },
       file: "SUPPORTS.contexts_residencies",
-      image: "./assets/supports-institutions.svg",
+      noMedia: true,
       tags: ["GRANTS", "DEVELOPMENT", "CO-PRODUCTION", "RESIDENCIES", "CONTEXTS"],
       tabs: {
         es: [
