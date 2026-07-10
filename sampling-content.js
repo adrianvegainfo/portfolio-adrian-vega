@@ -220,7 +220,7 @@ window.SAMPLING_CONTENT = {
           },
           {
             title: "Proceso",
-            html: `<p>Una de sus fases se desarrolla en La Model, antigua prision de Barcelona, donde la arquitectura se escucha como campo de memoria. Despues el proyecto toma forma escenica en Antic Teatre.</p><p>La experiencia permite pensar como una investigacion tecnica y perceptiva puede transformarse en puesta en escena.</p>`,
+            html: `<p>Una de sus fases se desarrolla en La Model, antigua prision de Barcelona, y en La Barceloneta, donde la arquitectura, el barrio y la memoria material se escuchan como campo sensible. Despues el proyecto toma forma escenica en Antic Teatre.</p><p>La experiencia permite pensar como una investigacion tecnica y perceptiva puede transformarse en puesta en escena.</p>`,
           },
           {
             title: "Material profesional",
@@ -234,7 +234,7 @@ window.SAMPLING_CONTENT = {
           },
           {
             title: "Proces",
-            html: `<p>Una de les seves fases es desenvolupa a La Model, antiga preso de Barcelona, on l'arquitectura s'escolta com a camp de memoria. Despres el projecte pren forma escenica a Antic Teatre.</p><p>L'experiencia permet pensar com una investigacio tecnica i perceptiva pot transformar-se en posada en escena.</p>`,
+            html: `<p>Una de les seves fases es desenvolupa a La Model, antiga preso de Barcelona, i a La Barceloneta, on l'arquitectura, el barri i la memoria material s'escolten com a camp sensible. Despres el projecte pren forma escenica a Antic Teatre.</p><p>L'experiencia permet pensar com una investigacio tecnica i perceptiva pot transformar-se en posada en escena.</p>`,
           },
           {
             title: "Material professional",
@@ -248,7 +248,7 @@ window.SAMPLING_CONTENT = {
           },
           {
             title: "Process",
-            html: `<p>One phase takes place at La Model, Barcelona's former prison, where architecture is listened to as a memory field. The project later becomes a stage work at Antic Teatre.</p><p>The experience opens a way to understand how technical and perceptual research can become staging.</p>`,
+            html: `<p>One phase takes place at La Model, Barcelona's former prison, and in La Barceloneta, where architecture, neighbourhood and material memory are listened to as a sensitive field. The project later becomes a stage work at Antic Teatre.</p><p>The experience opens a way to understand how technical and perceptual research can become staging.</p>`,
           },
           {
             title: "Professional material",
@@ -382,7 +382,7 @@ window.SAMPLING_CONTENT = {
       label: { es: "Apoyos", ca: "Suports", en: "Supports" },
       action: { es: "BECAS / CONTEXTOS", ca: "BEQUES / CONTEXTOS", en: "GRANTS / CONTEXTS" },
       file: "SUPPORTS.contexts_residencies",
-      image: "./assets/seleccion-memoria.jpg",
+      image: "./assets/supports-institutions.svg",
       tags: ["GRANTS", "DEVELOPMENT", "CO-PRODUCTION", "RESIDENCIES", "CONTEXTS"],
       tabs: {
         es: [
@@ -400,7 +400,7 @@ window.SAMPLING_CONTENT = {
           },
           {
             title: "Residencias",
-            html: `<p><em>Los lunares del Puma</em> se desarrolla como residencia y proceso en La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> se desarrolla en residencia de investigacion en el Palacio de Cornellana, Gijon/Xixon, y abre las lineas posteriores de <em>Sampling</em>, <em>Buffering</em> e instalacion.</p><p><em>Inaudit</em> activa procesos situados en La Modelo, Segovia y Eufonic.</p>`,
+            html: `<p><em>Los lunares del Puma</em> se desarrolla como residencia y proceso en La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> se desarrolla en residencia de investigacion en el Palacio de Cornellana, Gijon/Xixon, y abre las lineas posteriores de <em>Sampling</em>, <em>Buffering</em> e instalacion.</p><p><em>Inaudit</em> activa procesos situados en La Modelo, La Barceloneta, Segovia y Eufonic.</p>`,
           },
         ],
         ca: [
@@ -418,7 +418,7 @@ window.SAMPLING_CONTENT = {
           },
           {
             title: "Residencies",
-            html: `<p><em>Los lunares del Puma</em> es desenvolupa com a residencia i proces a La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> es desenvolupa en residencia de recerca al Palacio de Cornellana, Gijon/Xixon, i obre les linies posteriors de <em>Sampling</em>, <em>Buffering</em> i instal.lacio.</p><p><em>Inaudit</em> activa processos situats a La Modelo, Segovia i Eufonic.</p>`,
+            html: `<p><em>Los lunares del Puma</em> es desenvolupa com a residencia i proces a La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> es desenvolupa en residencia de recerca al Palacio de Cornellana, Gijon/Xixon, i obre les linies posteriors de <em>Sampling</em>, <em>Buffering</em> i instal.lacio.</p><p><em>Inaudit</em> activa processos situats a La Modelo, La Barceloneta, Segovia i Eufonic.</p>`,
           },
         ],
         en: [
@@ -436,7 +436,7 @@ window.SAMPLING_CONTENT = {
           },
           {
             title: "Residencies",
-            html: `<p><em>Los lunares del Puma</em> was developed as a residency and process at La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> was developed during a research residency at Palacio de Cornellana, Gijon/Xixon, opening the later lines of <em>Sampling</em>, <em>Buffering</em> and installation.</p><p><em>Inaudit</em> activates situated processes at La Modelo, Segovia and Eufonic.</p>`,
+            html: `<p><em>Los lunares del Puma</em> was developed as a residency and process at La Caldera.</p><p><em>Digital Bodies: Echo & Delay</em> was developed during a research residency at Palacio de Cornellana, Gijon/Xixon, opening the later lines of <em>Sampling</em>, <em>Buffering</em> and installation.</p><p><em>Inaudit</em> activates situated processes at La Modelo, La Barceloneta, Segovia and Eufonic.</p>`,
           },
         ],
       },

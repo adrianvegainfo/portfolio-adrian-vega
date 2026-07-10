@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Adrian Vega supports and contexts</title>
+  <desc id="desc">Institutional support, residency and co-production contexts listed as a graphic board.</desc>
+  <rect width="1200" height="760" fill="#fffdf3"/>
+  <rect x="28" y="28" width="1144" height="704" fill="#080808"/>
+  <rect x="52" y="52" width="1096" height="92" fill="#b9ff00"/>
+  <text x="78" y="113" fill="#080808" font-family="Arial Black, Arial, sans-serif" font-size="54" font-weight="900">APOYOS / SUPPORTS</text>
+  <text x="78" y="176" fill="#fffdf3" font-family="Courier New, monospace" font-size="24">GRANTS / DEVELOPMENT / CO-PRODUCTIONS / RESIDENCIES</text>
+  <g font-family="Arial Black, Arial, sans-serif" font-size="32" font-weight="900">
+    <g fill="#fffdf3" stroke="#b9ff00" stroke-width="4">
+      <rect x="70" y="220" width="315" height="72"/>
+      <rect x="442" y="220" width="315" height="72"/>
+      <rect x="815" y="220" width="315" height="72"/>
+      <rect x="70" y="322" width="315" height="72"/>
+      <rect x="442" y="322" width="315" height="72"/>
+      <rect x="815" y="322" width="315" height="72"/>
+      <rect x="70" y="424" width="315" height="72"/>
+      <rect x="442" y="424" width="315" height="72"/>
+      <rect x="815" y="424" width="315" height="72"/>
+      <rect x="70" y="526" width="315" height="72"/>
+      <rect x="442" y="526" width="315" height="72"/>
+      <rect x="815" y="526" width="315" height="72"/>
+      <rect x="70" y="628" width="315" height="72"/>
+      <rect x="442" y="628" width="315" height="72"/>
+      <rect x="815" y="628" width="315" height="72"/>
+    </g>
+    <g fill="#080808">
+      <text x="96" y="266">CLT019</text>
+      <text x="468" y="266">RAMON LLULL</text>
+      <text x="841" y="266">FESTIVAL GREC</text>
+      <text x="96" y="368">GRANER</text>
+      <text x="468" y="368">DANSA METRO</text>
+      <text x="841" y="368">ESCENA PATRIMONIO</text>
+      <text x="96" y="470">LA CALDERA</text>
+      <text x="468" y="470">CORNELLANA</text>
+      <text x="841" y="470">LA MODELO</text>
+      <text x="96" y="572">BARCELONETA</text>
+      <text x="468" y="572">EUFONIC</text>
+      <text x="841" y="572">MERCAT FLORS</text>
+      <text x="96" y="674">ANTIC TEATRE</text>
+      <text x="468" y="674">KVS BRUSSELS</text>
+      <text x="841" y="674">FIRA MEDIT.</text>
+    </g>
+  </g>
+</svg>
