@@ -25,7 +25,7 @@ window.SAMPLING_CONTENT = {
       briefView: "Vista breve",
       fullPage: "Pagina completa",
       status: [
-        "web profesional para GREC Pro",
+        "portfolio profesional y dossier de produccion",
         "obras, pedagogia, apoyos, bio y contacto",
         "videos completos disponibles bajo peticion",
       ],
@@ -57,7 +57,7 @@ window.SAMPLING_CONTENT = {
       briefView: "Vista breu",
       fullPage: "Pagina completa",
       status: [
-        "web professional per a GREC Pro",
+        "portfolio professional i dossier de produccio",
         "obres, pedagogia, suports, bio i contacte",
         "videos complets disponibles sota peticio",
       ],
@@ -89,7 +89,7 @@ window.SAMPLING_CONTENT = {
       briefView: "Brief view",
       fullPage: "Full page",
       status: [
-        "professional website for GREC Pro",
+        "professional portfolio and production dossier",
         "works, education, supports, bio and contact",
         "full videos available on request",
       ],
@@ -121,7 +121,7 @@ window.SAMPLING_CONTENT = {
       briefView: "Vue breve",
       fullPage: "Page complete",
       status: [
-        "site professionnel pour GREC Pro",
+        "portfolio professionnel et dossier de production",
         "pieces, pedagogie, soutiens, bio et contact",
         "videos completes disponibles sur demande",
       ],
@@ -153,7 +153,7 @@ window.SAMPLING_CONTENT = {
       briefView: "Korte weergave",
       fullPage: "Volledige pagina",
       status: [
-        "professionele website voor GREC Pro",
+        "professioneel portfolio en productiedossier",
         "werken, pedagogie, steun, bio en contact",
         "volledige videos beschikbaar op aanvraag",
       ],
