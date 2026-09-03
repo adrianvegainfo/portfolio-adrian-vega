@@ -1,0 +1,62 @@
+const translations = {
+  fr: {
+    skip: "Aller au contenu", mark: "LUMIÈRE / SCÈNE / CONDUITE", navProjects: "Projets", navMethod: "Méthode", navContact: "Contact",
+    heroEyebrow: "PORTFOLIO TECHNIQUE / 2026", heroTitle: "Je conçois la lumière depuis l’intérieur de la scène.",
+    heroLead: "Je suis Adrián Vega, technicien, concepteur et régisseur lumière. Je travaille entre l’intention artistique et la réalité de chaque lieu : je prépare, programme, adapte et conduis des systèmes lumière pour que l’espace devienne lui aussi interprète.",
+    viewWork: "Voir les projets", downloadCv: "Télécharger le CV technique", role1: "Conception lumière", role2: "Programmation et conduite", role3: "Adaptation et liaison technique", profile: "PROFIL",
+    statement: "Mon expérience de créateur scénique me permet de lire une pièce à partir du corps, du rythme et de la dramaturgie. Mon travail technique transforme cette lecture en décisions concrètes : positions, intensités, températures, transitions, patch et cues reproductibles.",
+    present: "AUJOURD’HUI", ttaRole: "Technicien, concepteur et régisseur lumière",
+    ttaIntro: "Un concert chorégraphique où danse, son live et architecture s’influencent mutuellement. La lumière devait soutenir la proximité avec le public, rendre le mouvement lisible et transformer des espaces dotés d’équipements très différents.",
+    tta1: "Développement du concept, du plan technique et de la structure de cues.", tta2: "Préparation du showfile et programmation sur ChamSys Compact Connect.", tta3: "Adaptation du patch, des positions et des projecteurs à chaque lieu.", tta4: "Coordination du montage avec les équipes techniques locales et conduite en direct.",
+    context: "Contexte", system: "Système", format: "Format", residencyShow: "Résidence + présentation", ttaCaption: "La lumière comme architecture temporaire : délimiter sans fermer l’espace.", process: "Processus / répétition", liveOperation: "Conduite en direct", rigStudy: "Lecture du lieu / rig", controlPosition: "Position de régie",
+    groovesRole: "Conception, adaptation et conduite", groovesIntro: "Une expérience au croisement de la danse, de la musique électronique, de l’improvisation et du club. Le dispositif s’adapte à chaque architecture et accompagne un format vivant, sensible à la proximité du public et au dialogue avec la régie DJ.", groovesTasks: "Programmation des scènes et cues, préparation 3D, montage, patch, vérification des adresses et circuits, coordination avec le technicien du lieu et intégration lumière, vidéo et son. Assistance à la mise en scène ; lumière et vidéo partagées avec Petar Tanev.",
+    photoCredit: "Photographies : Xavi Olmos · Festival Poetas 2025, La Casa Encendida", pumaRole: "Conception technique conduite depuis le plateau", pumaText: "J’ai conçu l’implantation des projecteurs et la relation entre son, projection et écrans. J’ai programmé et déclenché les mémoires lumière depuis l’espace scénique, en intégrant la conduite à la dramaturgie et en adaptant la pièce pendant la résidence technique.",
+    digitalRole: "Recherche technique et scénique", digitalText: "J’explore la manière dont la lumière, l’image et le signal transforment la présence du corps. Caméras, projecteurs, écrans, microphones et surfaces réfléchissantes forment un système scénique où le dispositif cesse d’être un support pour devenir un interlocuteur.",
+    sinRole: "Conception initiale et liaison technique de tournée", sinText: "J’ai réalisé la conception lumière initiale, ensuite développée sous le crédit collectif d’Iron Skulls Co. En tournée, j’ai adapté la proposition à des lieux très différents et assuré la liaison entre les besoins de la compagnie et les équipes techniques d’accueil.",
+    methodLabel: "MÉTHODE", methodTitle: "Du concept à la représentation", method1Title: "Écouter", method1Text: "Je lis le rythme, la dramaturgie, le corps et la relation au public avant de décider ce dont la lumière a besoin.", method2Title: "Traduire", method2Text: "Je transforme l’intention artistique en plan réalisable, liste de matériel et structure claire de scènes et de cues.", method3Title: "Adapter", method3Text: "Je travaille avec l’équipe du lieu, j’ajuste le patch, les positions et les puissances, et je documente les changements pour rendre le système reproductible.", method4Title: "Conduire", method4Text: "Pendant la représentation, j’écoute le temps vivant du plateau : précision technique et écoute artistique ne forment qu’une seule tâche.",
+    projection: "Projection", video: "Vidéo", touring: "Tournée", contactLabel: "CONTACT", contactTitle: "Parlons de l’espace avant de l’éclairer.", contactText: "Disponible pour la conception, l’assistance, la programmation, l’adaptation et la conduite lumière en résidence, production et tournée.", location: "Bruxelles, Belgique · Disponibilité internationale", backSite: "Retour au site principal"
+  },
+  nl: {
+    skip: "Naar de inhoud", mark: "LICHT / PODIUM / BEDIENING", navProjects: "Projecten", navMethod: "Methode", navContact: "Contact",
+    heroEyebrow: "TECHNISCH PORTFOLIO / 2026", heroTitle: "Ik ontwerp licht van binnenuit de scène.",
+    heroLead: "Ik ben Adrián Vega, lichttechnicus, lichtontwerper en operator. Ik werk op het raakvlak van artistieke intentie en de realiteit van elke zaal: ik bereid voor, programmeer, pas aan en bedien lichtsystemen zodat ook de ruimte kan performen.",
+    viewWork: "Bekijk projecten", downloadCv: "Download technisch cv", role1: "Lichtontwerp", role2: "Programmering en bediening", role3: "Aanpassing en technische liaison", profile: "PROFIEL",
+    statement: "Mijn ervaring als podiumkunstenaar laat me een werk lezen vanuit lichaam, ritme en dramaturgie. Mijn technische werk vertaalt die lezing naar concrete keuzes: posities, intensiteiten, kleurtemperaturen, overgangen, patch en reproduceerbare cues.",
+    present: "HEDEN", ttaRole: "Lichttechnicus, lichtontwerper en operator",
+    ttaIntro: "Een choreografisch concert waarin dans, livegeluid en architectuur elkaar beïnvloeden. Het licht moest de nabijheid van het publiek ondersteunen, de beweging leesbaar maken en ruimtes met zeer uiteenlopende uitrusting transformeren.",
+    tta1: "Ontwikkeling van concept, technisch plan en cuestructuur.", tta2: "Voorbereiding van de showfile en programmering met ChamSys Compact Connect.", tta3: "Aanpassing van patch, posities en armaturen aan elke locatie.", tta4: "Coördinatie van de opbouw met lokale technische teams en livebediening.",
+    context: "Context", system: "Systeem", format: "Formaat", residencyShow: "Residentie + presentatie", ttaCaption: "Licht als tijdelijke architectuur: de ruimte afbakenen zonder haar te sluiten.", process: "Proces / repetitie", liveOperation: "Livebediening", rigStudy: "Ruimteanalyse / rig", controlPosition: "Bedieningspositie",
+    groovesRole: "Ontwerp, aanpassing en bediening", groovesIntro: "Een ervaring tussen dans, elektronische muziek, improvisatie en clubcultuur. Het ontwerp past zich aan elke architectuur aan en ondersteunt een levend format, gevoelig voor de nabijheid van het publiek en de dialoog met de dj-set.", groovesTasks: "Programmering van scènes en cues, 3D-voorbereiding, opbouw, patch, controle van adressen en kanalen, afstemming met de zaaltechnicus en integratie van licht, video en geluid. Assistentie regie; licht en video gedeeld met Petar Tanev.",
+    photoCredit: "Fotografie: Xavi Olmos · Festival Poetas 2025, La Casa Encendida", pumaRole: "Technisch ontwerp bediend vanaf de speelvloer", pumaText: "Ik ontwierp de plaatsing van de armaturen en de relatie tussen geluid, projectie en schermen. Ik programmeerde en triggerde de lichtstanden vanaf de speelvloer, integreerde de bediening in de dramaturgie en paste het werk aan tijdens de technische residentie.",
+    digitalRole: "Technisch en artistiek onderzoek", digitalText: "Ik onderzoek hoe licht, beeld en signaal de aanwezigheid van het lichaam veranderen. Camera’s, projectoren, schermen, microfoons en reflecterende oppervlakken vormen een podiumsysteem waarin het apparaat geen ondersteuning meer is, maar een gesprekspartner.",
+    sinRole: "Initieel ontwerp en technische liaison op tournee", sinText: "Ik maakte het initiële lichtontwerp, dat later verder werd ontwikkeld onder het collectieve credit van Iron Skulls Co. Tijdens de tournee paste ik het ontwerp aan zeer verschillende zalen aan en vormde ik de technische schakel tussen het gezelschap en de teams van elke locatie.",
+    methodLabel: "METHODE", methodTitle: "Van concept tot voorstelling", method1Title: "Luisteren", method1Text: "Ik lees ritme, dramaturgie, lichaam en publieksrelatie voordat ik bepaal wat het licht nodig heeft.", method2Title: "Vertalen", method2Text: "Ik vertaal de artistieke intentie naar een haalbaar plan, een materiaallijst en een heldere structuur van scènes en cues.", method3Title: "Aanpassen", method3Text: "Ik werk met het zaalteam, pas patch, posities en vermogens aan en documenteer de wijzigingen zodat het systeem reproduceerbaar blijft.", method4Title: "Bedienen", method4Text: "Tijdens de voorstelling luister ik naar de levende tijd van de scène: technische precisie en artistieke aandacht zijn één taak.",
+    projection: "Projectie", video: "Video", touring: "Tournee", contactLabel: "CONTACT", contactTitle: "Laten we over de ruimte praten voordat we haar belichten.", contactText: "Beschikbaar voor lichtontwerp, assistentie, programmering, aanpassing en bediening tijdens residenties, producties en tournees.", location: "Brussel, België · Internationaal beschikbaar", backSite: "Terug naar de hoofdwebsite"
+  }
+};
+
+const spanish = Object.fromEntries([...document.querySelectorAll("[data-i18n]")].map((node) => [node.dataset.i18n, node.innerHTML]));
+const cvFiles = { es: "Adrian_Vega_CV_Tecnico_ES.pdf", fr: "Adrian_Vega_CV_Technique_FR.pdf", nl: "Adrian_Vega_CV_Technisch_NL.pdf" };
+const titles = { es: "Adrián Vega — Portfolio técnico de iluminación", fr: "Adrián Vega — Portfolio technique lumière", nl: "Adrián Vega — Technisch lichtportfolio" };
+
+function setLanguage(lang) {
+  const dictionary = lang === "es" ? spanish : translations[lang];
+  document.documentElement.lang = lang === "nl" ? "nl-BE" : lang;
+  document.title = titles[lang];
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    if (dictionary[node.dataset.i18n]) node.innerHTML = dictionary[node.dataset.i18n];
+  });
+  document.querySelectorAll("[data-lang]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.lang === lang)));
+  document.querySelectorAll(".cv-link").forEach((link) => link.href = `../assets/technical/${cvFiles[lang]}`);
+  localStorage.setItem("technical-portfolio-language", lang);
+}
+
+document.querySelectorAll("[data-lang]").forEach((button) => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+
+const preferred = localStorage.getItem("technical-portfolio-language");
+if (["es", "fr", "nl"].includes(preferred)) setLanguage(preferred);
