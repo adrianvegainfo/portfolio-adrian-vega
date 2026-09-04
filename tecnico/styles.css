@@ -104,6 +104,12 @@ figcaption { padding-top: .65rem; color: var(--muted); font: .65rem/1.4 var(--mo
 .sinestesia { display: grid; grid-template-columns: .7fr 1fr; gap: clamp(3rem, 10vw, 10rem); padding-top: clamp(5rem, 9vw, 9rem); padding-bottom: clamp(5rem, 9vw, 9rem); background: var(--paper); color: var(--paper-ink); }
 .sinestesia .section-number, .sinestesia .project-meta { color: #5672a0; text-align: left; }
 .sinestesia > div > p { color: #3f4248; }
+.sinestesia-gallery { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: clamp(1rem, 3vw, 3rem); }
+.sinestesia-gallery figure { margin: 0; overflow: hidden; background: #08090c; }
+.sinestesia-gallery img { aspect-ratio: 8 / 5; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+.sinestesia-gallery .sinestesia-lead { grid-column: 1 / -1; }
+.sinestesia-gallery .sinestesia-lead img { aspect-ratio: 16 / 7; }
+.sinestesia-gallery figure:hover img { transform: scale(1.018); }
 
 .method { padding-top: clamp(5rem, 9vw, 9rem); padding-bottom: clamp(5rem, 9vw, 9rem); }
 .method header { display: grid; grid-template-columns: .4fr 1fr; align-items: end; gap: 2rem; }
@@ -167,6 +173,9 @@ figcaption { padding-top: .65rem; color: var(--muted); font: .65rem/1.4 var(--mo
   .cinema-strip { display: flex; height: 34rem; overflow-x: auto; scroll-snap-type: x mandatory; }
   .cinema-strip figure { flex: 0 0 82vw; scroll-snap-align: start; }
   .project-pair { padding-left: 0; padding-right: 0; }
+  .sinestesia-gallery { display: flex; gap: .75rem; margin-right: calc(var(--pad) * -1); overflow-x: auto; scroll-snap-type: x mandatory; }
+  .sinestesia-gallery figure, .sinestesia-gallery .sinestesia-lead { flex: 0 0 84vw; scroll-snap-align: start; }
+  .sinestesia-gallery img, .sinestesia-gallery .sinestesia-lead img { aspect-ratio: 8 / 5; }
   .method-grid { grid-template-columns: 1fr; }
   .method-grid li { min-height: 17rem; }
   .method-grid h3 { margin-top: 2.5rem; }
