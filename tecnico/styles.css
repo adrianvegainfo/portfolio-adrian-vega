@@ -101,6 +101,11 @@ figcaption { padding-top: .65rem; color: var(--muted); font: .65rem/1.4 var(--mo
 .project-card h2 { font-size: clamp(2.2rem, 4vw, 4.3rem); }
 .project-card .project-meta { margin: 1rem 0 2.5rem; text-align: left; }
 .project-card h3 { margin-top: 2.5rem; }
+.project-card .puma-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 11rem; gap: .75rem; margin-top: 2.5rem; }
+.project-card .puma-gallery figure { height: auto; margin: 0; background: #12151b; }
+.project-card .puma-gallery .portrait { grid-row: span 2; }
+.project-card .puma-gallery img { transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+.project-card .puma-gallery figure:hover img { transform: scale(1.025); }
 .sinestesia { display: grid; grid-template-columns: .7fr 1fr; gap: clamp(3rem, 10vw, 10rem); padding-top: clamp(5rem, 9vw, 9rem); padding-bottom: clamp(5rem, 9vw, 9rem); background: var(--paper); color: var(--paper-ink); }
 .sinestesia .section-number, .sinestesia .project-meta { color: #5672a0; text-align: left; }
 .sinestesia > div > p { color: #3f4248; }
@@ -173,6 +178,8 @@ figcaption { padding-top: .65rem; color: var(--muted); font: .65rem/1.4 var(--mo
   .cinema-strip { display: flex; height: 34rem; overflow-x: auto; scroll-snap-type: x mandatory; }
   .cinema-strip figure { flex: 0 0 82vw; scroll-snap-align: start; }
   .project-pair { padding-left: 0; padding-right: 0; }
+  .project-card .puma-gallery { display: flex; grid-auto-rows: auto; margin-right: calc(clamp(1.5rem, 4vw, 4rem) * -1); overflow-x: auto; scroll-snap-type: x mandatory; }
+  .project-card .puma-gallery figure, .project-card .puma-gallery .portrait { flex: 0 0 80vw; height: auto; aspect-ratio: 8 / 5; scroll-snap-align: start; }
   .sinestesia-gallery { display: flex; gap: .75rem; margin-right: calc(var(--pad) * -1); overflow-x: auto; scroll-snap-type: x mandatory; }
   .sinestesia-gallery figure, .sinestesia-gallery .sinestesia-lead { flex: 0 0 84vw; scroll-snap-align: start; }
   .sinestesia-gallery img, .sinestesia-gallery .sinestesia-lead img { aspect-ratio: 8 / 5; }
