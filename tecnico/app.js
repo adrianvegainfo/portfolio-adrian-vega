@@ -1,5 +1,6 @@
 const translations = {
   fr: {
+    ttaShadows: "Mouvement et ombres architecturales", ttaBacklight: "Contre-jour et proximité du public", ttaSculpture: "La lumière sculpte les corps", ttaSound: "Dispositif sonore en direct",
     skip: "Aller au contenu", mark: "LUMIÈRE / SCÈNE / CONDUITE", navProjects: "Projets", navMethod: "Méthode", navContact: "Contact",
     heroEyebrow: "PORTFOLIO TECHNIQUE / 2026", heroTitle: "Je conçois la lumière depuis l’intérieur de la scène.",
     heroLead: "Je suis Adrián Vega, technicien, concepteur et régisseur lumière. Je travaille entre l’intention artistique et la réalité de chaque lieu : je prépare, programme, adapte et conduis des systèmes lumière pour que l’espace devienne lui aussi interprète.",
@@ -17,6 +18,7 @@ const translations = {
     projection: "Projection", video: "Vidéo", touring: "Tournée", contactLabel: "CONTACT", contactTitle: "Parlons de l’espace avant de l’éclairer.", contactText: "Disponible pour la conception, l’assistance, la programmation, l’adaptation et la conduite lumière en résidence, production et tournée.", location: "Bruxelles, Belgique · Disponibilité internationale", backSite: "Retour au site principal", pedagogySite: "Portfolio pédagogique"
   },
   nl: {
+    ttaShadows: "Beweging en architecturale schaduwen", ttaBacklight: "Tegenlicht en nabijheid van het publiek", ttaSculpture: "Licht geeft de lichamen vorm", ttaSound: "Livegeluidsopstelling",
     skip: "Naar de inhoud", mark: "LICHT / PODIUM / BEDIENING", navProjects: "Projecten", navMethod: "Methode", navContact: "Contact",
     heroEyebrow: "TECHNISCH PORTFOLIO / 2026", heroTitle: "Ik ontwerp licht van binnenuit de scène.",
     heroLead: "Ik ben Adrián Vega, lichttechnicus, lichtontwerper en operator. Ik werk op het raakvlak van artistieke intentie en de realiteit van elke zaal: ik bereid voor, programmeer, pas aan en bedien lichtsystemen zodat ook de ruimte kan performen.",
