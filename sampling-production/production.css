@@ -1,0 +1,53 @@
+/* Dossier-specific additions; the other Grec pages keep their existing design. */
+.topbar { grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; }
+.language-switch { display: flex; gap: 3px; }
+.language-switch a { display: grid; place-items: center; min-width: 36px; min-height: 40px; color: var(--ink); font-size: .75rem; font-weight: 900; text-decoration: none; border: 1px solid var(--ink); }
+.language-switch a[aria-current] { background: var(--ink); color: var(--paper); }
+.language-switch a:hover { background: var(--acid); color: var(--ink); }
+.hero { min-height: calc(100svh - 64px); }
+.hero-video { position: absolute; inset: 0; overflow: hidden; pointer-events: none; container-type: size; }
+.hero-video iframe { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; min-width: 177.78cqh; min-height: 56.25cqw; transform: translate(-50%, -50%); border: 0; }
+.hero-shade { background: linear-gradient(90deg, rgba(0,0,0,.76), rgba(0,0,0,.30) 65%, rgba(0,0,0,.12)); }
+.hero-copy { padding-top: 7vh; padding-bottom: 165px; }
+.hero h1 { font-size: clamp(3.4rem, 9vw, 8rem); overflow-wrap: normal; }
+.hero-tagline { max-width: 28ch; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin: 0 0 24px; }
+.teaser-play { gap: 14px; min-height: 60px; font-size: 1rem; padding: 15px 22px; }
+.teaser-play span { font-size: 1.25rem; }
+.hero-copy > .primary-link { background: transparent; color: var(--paper); box-shadow: none; border-width: 1px; font-size: .72rem; }
+.background-toggle { color: #fff; background: rgba(0,0,0,.55); border: 1px solid #fff9; padding: 12px; min-height: 44px; font: inherit; font-size: .72rem; cursor: pointer; }
+.background-toggle[hidden] { display: none; }
+.teaser-dialog { width: min(1100px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: 0; background: #090909; color: #fff; border: 1px solid #fff6; overflow: auto; }
+.teaser-dialog::backdrop { background: rgba(0,0,0,.88); }
+.teaser-dialog-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 16px 20px; }
+.teaser-dialog-header h2 { font-size: 1rem; margin: 0; }
+.teaser-dialog-header button { border: 1px solid #fff; background: transparent; color: #fff; padding: 10px 14px; min-height: 44px; flex-shrink: 0; cursor: pointer; font: inherit; font-size: .8rem; }
+.teaser-player { aspect-ratio: 16 / 9; }
+.teaser-player iframe { width: 100%; height: 100%; border: 0; display: block; }
+.teaser-fallback { display: inline-block; color: var(--acid); margin: 16px 20px; }
+body.teaser-open { overflow: hidden; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--hot); outline-offset: 4px; }
+@media (max-width: 1200px) {
+  .topbar { grid-template-columns: minmax(0,1fr) auto auto; }
+  .brand small { display: none; }
+  .menu-button { display: block; }
+  .main-nav { display: none; position: absolute; top: 100%; right: 0; left: 0; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0; background: var(--paper); }
+  .main-nav.is-open { display: grid; }
+  .main-nav a { min-height: 46px; padding: 14px; }
+}
+@media (max-width: 760px) {
+  .topbar { gap: 8px; }
+  .language-switch a { min-width: 32px; }
+  .hero-copy { width: calc(100% - 24px); padding: 7vh 0 245px 18px; }
+  .hero-shade { background: linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.32)); }
+  .hero-status { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .hero-tagline { font-size: 1.5rem; }
+  .hero-intro { font-size: .9rem; }
+  .teaser-play { font-size: .85rem; padding: 14px; min-height: 54px; }
+  .hero-actions { gap: 18px; }
+  .teaser-dialog-header { padding: 12px; gap: 12px; }
+  .teaser-dialog-header h2 { font-size: .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-strip div { animation: none; }
+}
