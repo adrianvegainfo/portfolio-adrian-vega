@@ -7,7 +7,7 @@
   const close = document.querySelector('[data-close-teaser]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const embed = 'https://www.youtube.com/embed/pkP5lEjQFqI';
-  const backgroundURL = `${embed}?autoplay=1&mute=1&controls=0&loop=1&playlist=pkP5lEjQFqI&playsinline=1&rel=0`;
+  const backgroundURL = `${embed}?autoplay=1&mute=1&controls=0&start=10&loop=1&playlist=pkP5lEjQFqI&playsinline=1&rel=0`;
   let running = false;
   let restoreBackground = false;
 
