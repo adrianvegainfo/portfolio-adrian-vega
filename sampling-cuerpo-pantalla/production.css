@@ -53,6 +53,43 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--hot); outline-o
 }
 
 /* Edition title follows the original dossier's type scale. */
+.hero-copy { width: min(950px, calc(100% - 40px)); padding-bottom: 50px; }
+.hero-intro { max-width: 66ch; font-size: 1rem; line-height: 1.65; }
+.hero-status { position: relative; inset: auto; width: calc(100% - 48px); margin: 0 24px 24px; }
+.hero-shade { background: linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.6) 65%,rgba(0,0,0,.3)); }
+.dossier-chapter { padding-top: 76px; padding-bottom: 76px; }
+.chapter-heading { display: grid; grid-template-columns: 70px minmax(0,1fr); gap: 24px; align-items: start; margin-bottom: 40px; }
+.chapter-number { font-size: 1rem; padding-top: 8px; border-top: 3px solid currentColor; }
+.chapter-heading h2 { max-width: 24ch; margin: 0; font-size: clamp(2rem,4.4vw,4rem); line-height: 1.03; overflow-wrap: anywhere; }
+.chapter-body { margin-left: 94px; max-width: 900px; font-size: 1rem; line-height: 1.75; }
+.chapter-body p { max-width: 78ch; margin: 0 0 24px; }
+.chapter-body h3 { font-size: 1.6rem; line-height: 1.2; margin: 44px 0 20px; }
+.chapter-body blockquote { max-width: 32ch; margin: 40px 0; padding: 12px 0 12px 24px; font-size: clamp(1.6rem,2.8vw,2.7rem); line-height: 1.2; }
+.chapter-body ul { padding-left: 22px; margin: 24px 0 32px; }
+.chapter-body li { padding-left: 5px; margin: 0 0 14px; }
+#framework .chapter-body > p:nth-child(-n+3) { font-family: Arial,sans-serif; font-size: clamp(1.3rem,2vw,1.8rem); line-height: 1.45; }
+.table-scroll { overflow-x: auto; margin: 28px 0; }
+.chapter-body table { width: 100%; border-collapse: collapse; text-align: left; font-size: .9rem; line-height: 1.55; }
+.chapter-body th,.chapter-body td { padding: 18px 14px; border: 1px solid currentColor; vertical-align: top; }
+.chapter-body th { min-width: 140px; }
+.chapter-body thead { background: var(--ink); color: var(--paper); }
+#materials .chapter-body { margin-left: 0; max-width: none; }
+.chapter-body .video-grid { margin-top: 0; }
+.chapter-body .video-grid h3 { margin-top: 22px; font-size: 1.3rem; }
+.chapter-body .gallery { margin-top: 24px; }
+.chapter-body .gallery img { aspect-ratio: 3/2; object-fit: cover; }
+.chapter-body .gallery span { text-align: left; line-height: 1.5; }
+.chapter-body .qr-block { display: inline-block; width: 160px; padding: 8px; margin-top: 20px; }
+@media(max-width:760px) {
+ .hero-copy { padding-bottom: 36px; }
+ .hero-status { width: calc(100% - 24px); margin: 0 12px 24px; }
+ .dossier-chapter { padding: 48px 20px; }
+ .chapter-heading { grid-template-columns: 32px minmax(0,1fr); gap: 14px; margin-bottom: 28px; }
+ .chapter-body { margin-left: 0; }
+ .chapter-body th,.chapter-body td { padding: 12px 10px; }
+ .chapter-body table { min-width: 540px; }
+ .hero h1 { font-size: clamp(2.8rem,11vw,5rem); }
+}
 .hero h1 .hero-edition {
   display: block;
   margin-top: .55em;
