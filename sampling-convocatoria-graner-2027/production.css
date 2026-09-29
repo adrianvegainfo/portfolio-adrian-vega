@@ -201,3 +201,17 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--hot); outline-o
   text-transform: uppercase;
   box-shadow: 7px 7px 0 var(--ink);
 }
+
+/* Índice centrado y sección actual marcada en rojo. */
+.topbar .main-nav,
+.topbar .main-nav.is-open {
+  justify-content: safe center;
+}
+.topbar .main-nav .nav-contact {
+  background: #fff;
+  color: var(--ink);
+}
+.topbar .main-nav a[aria-current="location"] {
+  background: var(--hot);
+  color: #fff;
+}

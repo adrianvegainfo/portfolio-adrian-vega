@@ -72,3 +72,44 @@ if (dossierHeader) {
   updateDossierHeaderHeight();
   new ResizeObserver(updateDossierHeaderHeight).observe(dossierHeader);
 }
+
+// Indicate which dossier section is currently being read.
+const dossierNav = document.querySelector('#main-nav');
+if (dossierNav && dossierHeader) {
+  const navLinks = [...dossierNav.querySelectorAll('a[href^="#"]')];
+  const sections = [...document.querySelectorAll('main > section[id]')];
+  const linkById = new Map(navLinks.map((link) => [link.hash.slice(1), link]));
+  let currentLink = null;
+  let scheduled = false;
+
+  const updateCurrentSection = () => {
+    scheduled = false;
+    const readingLine = dossierHeader.getBoundingClientRect().height + Math.min(window.innerHeight * 0.2, 150);
+    let activeLink = null;
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top > readingLine) break;
+      activeLink = linkById.get(section.id) || activeLink;
+    }
+    if (activeLink === currentLink) return;
+    currentLink?.removeAttribute('aria-current');
+    activeLink?.setAttribute('aria-current', 'location');
+    currentLink = activeLink;
+    if (activeLink && dossierNav.scrollWidth > dossierNav.clientWidth) {
+      const left = activeLink.offsetLeft - dossierNav.offsetLeft;
+      const right = left + activeLink.offsetWidth;
+      if (left < dossierNav.scrollLeft || right > dossierNav.scrollLeft + dossierNav.clientWidth) {
+        dossierNav.scrollTo({ left: left - (dossierNav.clientWidth - activeLink.offsetWidth) / 2, behavior: 'smooth' });
+      }
+    }
+  };
+
+  const scheduleCurrentSection = () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(updateCurrentSection);
+  };
+  window.addEventListener('scroll', scheduleCurrentSection, { passive: true });
+  window.addEventListener('resize', scheduleCurrentSection);
+  window.addEventListener('hashchange', scheduleCurrentSection);
+  scheduleCurrentSection();
+}
