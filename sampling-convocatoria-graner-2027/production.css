@@ -186,3 +186,18 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--hot); outline-o
 .topbar .language-switch a { min-width:30px; min-height:34px; padding:6px; font-size:.64rem; }
 @media(max-width:1200px) { .topbar { grid-template-columns:auto minmax(0,1fr) auto; } }
 @media(max-width:600px) { .topbar { gap:6px; padding:6px; } .topbar .language-switch a { min-width:28px; padding:4px; } }
+
+/* El regreso al plan cierra el bloque de contacto. */
+.contact-copy .back-to-plan {
+  display: inline-flex;
+  align-items: center;
+  min-height: 50px;
+  margin-top: 20px;
+  padding: 12px 16px;
+  border: var(--line);
+  background: var(--hot);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 7px 7px 0 var(--ink);
+}
