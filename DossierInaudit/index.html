@@ -102,6 +102,19 @@ body.zoom .video-page{width:150%}
 .video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 5%;width:100%;max-width:1400px;margin:0 auto}
 @media(max-width:420px){.video-grid{grid-template-columns:1fr;gap:24px}}
 @media(max-width:800px){.language-picker button{font-size:9px;padding:5px}.header-actions{gap:0}}
+/* Fit each complete dossier panel to a desktop browser window. */
+@media(min-width:900px){
+ body{background:#181914}
+ main,body.zoom main{min-height:calc(100dvh - var(--header-height,62px));display:flex;align-items:center;justify-content:center}
+ main>section{flex:none;margin:0 auto;transform-origin:top center}
+ .video-page{min-height:0;padding:24px}
+ .video-page .video-copy{margin:0 3% 22px}
+ .video-page .video-copy-end{margin-top:22px;margin-bottom:0}
+ .video-grid{gap:16px 5%;max-width:clamp(420px,calc((100dvh - var(--header-height,62px) - 260px)*1.65),1100px)}
+ .video-page .video-copy{font-size:13px;line-height:1.45;margin:0 3% 14px}
+ .video-page .video-copy-end{margin:14px 3% 0}
+ .video-card figcaption{font-size:11px;line-height:1.35;margin:8px 0 0}
+}
 </style>
 </head>
 <body>
@@ -129,10 +142,21 @@ tabs.forEach((t,i)=>{t.addEventListener('click',()=>show(i));t.addEventListener(
 document.body.classList.toggle('local-file',location.protocol==='file:');
 function syncVideos(){document.querySelectorAll('[data-video-id]').forEach(frame=>{const wrap=frame.closest('.video-frame');if(!wrap.querySelector('.video-poster')){const poster=document.createElement('div');poster.className='video-poster';poster.setAttribute('aria-hidden','true');const img=document.createElement('img');img.alt='';img.src='assets/video-'+({'SzSHvOLMI-Q':'X33.jpg','h5QRH1IsxVc':'X27.jpg','Bt8aEq2FMBc':'X30.jpg'}[frame.dataset.videoId]);poster.append(img);const label=document.createElement('span');label.className='video-loading';label.textContent={es:'Cargando vídeo',ca:'Carregant vídeo',fr:'Chargement de la vidéo',en:'Loading video',nl:'Video laden'}[document.documentElement.lang]||'Loading video';poster.append(label);wrap.append(poster);frame.addEventListener('load',()=>{if(current===4&&frame.getAttribute('src'))wrap.classList.add('is-ready')})}if(current===4){if(!frame.getAttribute('src')){wrap.classList.remove('is-ready');const id=frame.dataset.videoId;let url='https://www.youtube.com/embed/'+id+'?autoplay=1&mute=1&playsinline=1&controls=1&loop=1&playlist='+id;if(location.protocol==='http:'||location.protocol==='https:')url+='&origin='+encodeURIComponent(location.origin);frame.src=url}}else if(frame.getAttribute('src')){wrap.classList.remove('is-ready');frame.removeAttribute('src')}})}
 function fitText(){document.querySelectorAll('section:not([hidden]) .fit-text').forEach(el=>{el.style.fontSize='';if(!el.clientHeight)return;let size=parseFloat(getComputedStyle(el).fontSize);for(let n=0;n<50&&el.scrollHeight>el.clientHeight+1;n++){size*=.98;el.style.fontSize=size+'px'}})}
+function fitViewport(){
+ const panel=panels[current];if(!panel)return;
+ const headerHeight=document.querySelector('header').getBoundingClientRect().height;
+ document.documentElement.style.setProperty('--header-height',headerHeight+'px');
+ panel.style.zoom='';panel.style.width='';
+ if(innerWidth<900)return;
+ const width=Math.min(innerWidth,current===4?1600:1200);panel.style.width=width+'px';
+ fitText();
+ const height=panel.getBoundingClientRect().height;
+ if(height>0)panel.style.zoom=Math.min(1,(innerHeight-headerHeight-4)/height);
+}
 function syncNativeVideo(){const movie=document.querySelector('[data-native-video]');if(!movie)return;const wrap=movie.closest('.video-frame');if(!wrap.querySelector('.video-poster')){const poster=document.createElement('div');poster.className='video-poster';poster.setAttribute('aria-hidden','true');poster.innerHTML='<img src="assets/video-X33.jpg" alt=""><span class="video-loading"></span>';poster.querySelector('span').textContent={es:'Cargando vídeo',ca:'Carregant vídeo',fr:'Chargement de la vidéo',en:'Loading video',nl:'Video laden'}[document.documentElement.lang];wrap.append(poster)}if(!movie.dataset.bound){movie.addEventListener('loadeddata',()=>movie.closest('.video-frame').classList.add('is-ready'));movie.dataset.bound='true'}if(current===4){if(!movie.getAttribute('src'))movie.src=movie.dataset.source;if(movie.readyState>=2)wrap.classList.add('is-ready');movie.play().catch(()=>{})}else movie.pause();[...movie.textTracks].forEach(track=>track.mode=track.language===document.documentElement.lang?'showing':'disabled')}
-const baseShow=show;show=function(index,focus=false){baseShow(index,focus);document.body.classList.toggle('photographic',[0,2,4,6,8].includes(current));syncVideos();syncNativeVideo();requestAnimationFrame(fitText)};
+const baseShow=show;show=function(index,focus=false){baseShow(index,focus);document.body.classList.toggle('photographic',[0,2,4,6,8].includes(current));syncVideos();syncNativeVideo();requestAnimationFrame(fitViewport)};
 function setLanguage(lang){const t=window.INAUDIT_I18N?.[lang];if(lang!=='es'&&!t)lang='es';const previousMovie=document.querySelector('[data-native-video]');document.documentElement.lang=lang;document.getElementById('content').innerHTML=lang==='es'?spanishPanels:t.panels;const nextMovie=document.querySelector('[data-native-video]');if(previousMovie&&nextMovie)nextMovie.replaceWith(previousMovie);panels=[...document.querySelectorAll('[role=tabpanel]')];tabs.forEach((tab,i)=>tab.textContent=lang==='es'?spanishTabs[i]:t.tabs[i]);document.querySelector('.tabs').setAttribute('aria-label',lang==='es'?'Secciones del dossier':t.nav);document.querySelector('.skip').textContent=lang==='es'?'Ir al dossier':t.skip;document.querySelector('.language-picker').setAttribute('aria-label',lang==='es'?'Idioma':t.language);document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));const url=new URL(location.href);if(lang==='es')url.searchParams.delete('lang');else url.searchParams.set('lang',lang);history.replaceState(null,'',url.pathname+url.search+url.hash);document.querySelector('meta[name=description]').content=lang==='es'?'Inaudit. Una investigación performativa del patrimonio sonoro inaudible. Dossier de Adrián Vega y Adriano Galante.':t.subtitle;show(current)}
 document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>setLanguage(b.dataset.lang));
-function fromHash(){const i=slugs.indexOf(location.hash.slice(1));show(i<0?0:i)}window.addEventListener('hashchange',fromHash);window.addEventListener('resize',fitText);current=Math.max(0,slugs.indexOf(location.hash.slice(1)));setLanguage(new URLSearchParams(location.search).get('lang')||'es');
+function fromHash(){const i=slugs.indexOf(location.hash.slice(1));show(i<0?0:i)}window.addEventListener('hashchange',fromHash);window.addEventListener('resize',fitViewport);document.addEventListener('load',()=>requestAnimationFrame(fitViewport),true);current=Math.max(0,slugs.indexOf(location.hash.slice(1)));setLanguage(new URLSearchParams(location.search).get('lang')||'es');
 </script>
 </body></html>
