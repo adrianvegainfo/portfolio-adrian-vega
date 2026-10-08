@@ -115,6 +115,11 @@ body.zoom .video-page{width:150%}
  .video-page .video-copy-end{margin:14px 3% 0}
  .video-card figcaption{font-size:11px;line-height:1.35;margin:8px 0 0}
 }
+/* Mirrored ambient image fills desktop margins without covering the dossier. */
+@media(min-width:900px){
+ main{position:relative;isolation:isolate}
+ main::before{content:"";position:fixed;top:var(--header-height,62px);right:0;bottom:0;left:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#18191455,#18191455),var(--ambient-image);background-position:center;background-size:cover;filter:blur(18px) brightness(.7);transform:scaleX(-1) scale(1.06)}
+}
 </style>
 </head>
 <body>
@@ -144,6 +149,8 @@ function syncVideos(){document.querySelectorAll('[data-video-id]').forEach(frame
 function fitText(){document.querySelectorAll('section:not([hidden]) .fit-text').forEach(el=>{el.style.fontSize='';if(!el.clientHeight)return;let size=parseFloat(getComputedStyle(el).fontSize);for(let n=0;n<50&&el.scrollHeight>el.clientHeight+1;n++){size*=.98;el.style.fontSize=size+'px'}})}
 function fitViewport(){
  const panel=panels[current];if(!panel)return;
+ const ambient=['language-background-1.webp','language-background-2.webp','pagina-3.webp','language-background-4.webp','video-X27.jpg','language-background-6.webp','language-background-7.webp','language-background-8.webp','language-background-9.webp'][current];
+ document.getElementById('content').style.setProperty('--ambient-image','url("assets/'+ambient+'")');
  const headerHeight=document.querySelector('header').getBoundingClientRect().height;
  document.documentElement.style.setProperty('--header-height',headerHeight+'px');
  panel.style.zoom='';panel.style.width='';
@@ -160,3 +167,4 @@ document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>setLanguage(b.
 function fromHash(){const i=slugs.indexOf(location.hash.slice(1));show(i<0?0:i)}window.addEventListener('hashchange',fromHash);window.addEventListener('resize',fitViewport);document.addEventListener('load',()=>requestAnimationFrame(fitViewport),true);current=Math.max(0,slugs.indexOf(location.hash.slice(1)));setLanguage(new URLSearchParams(location.search).get('lang')||'es');
 </script>
 </body></html>
+
