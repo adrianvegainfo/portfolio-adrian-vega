@@ -787,4 +787,10 @@ window.SAMPLING_CONTENT = {
       html: `<p><a href="mailto:adrianvegainfo@gmail.com">adrianvegainfo@gmail.com</a></p><p><a href="https://adrianvega.art/" target="_blank" rel="noreferrer">adrianvega.art</a></p><p><a href="https://adrianvegainfo.github.io/portfolio-adrian-vega/#trajectory" target="_blank" rel="noreferrer">Leesportfolio</a></p>`,
     },
   ];
+  for (const lang of ['es', 'ca', 'en', 'fr', 'nl']) {
+    folders.inaudit.tabs[lang].push({
+      title: 'DossierInaudit',
+      html: `<p><a href="./DossierInaudit/?lang=${lang}#portada">DossierInaudit ↗</a></p>`,
+    });
+  }
 })();
