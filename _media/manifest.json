@@ -1,0 +1,23 @@
+[
+  {
+    "target": "DossierPuma/assets/escena-xixon-clean.mp4",
+    "parts": [
+      "_media/escena-xixon-clean/part-000.bin",
+      "_media/escena-xixon-clean/part-001.bin",
+      "_media/escena-xixon-clean/part-002.bin",
+      "_media/escena-xixon-clean/part-003.bin"
+    ],
+    "bytes": 299008450,
+    "sha256": "3c9a08cf2b278688ab5c6f692133881d86257a3e8d80540508c9ec25654661a5"
+  },
+  {
+    "target": "DossierPuma/assets/puma-site-specific-v2.mp4",
+    "parts": [
+      "_media/puma-site-specific-v2/part-000.bin",
+      "_media/puma-site-specific-v2/part-001.bin",
+      "_media/puma-site-specific-v2/part-002.bin"
+    ],
+    "bytes": 216011214,
+    "sha256": "65f27521e32458562a3fbd04cb77fc5dcf736fddbbd5a7ee814da5a2af6e8978"
+  }
+]

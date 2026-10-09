@@ -3,3 +3,4 @@ start-local.ps1
 index_v*.html
 desktop-performance_v*.css
 versions/
+_site/
