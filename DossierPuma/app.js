@@ -42,18 +42,56 @@
     restoring=false;update();
   });
   if(document.readyState==='complete')restore();else addEventListener('load',restore,{once:true});
-  const pauseObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)entry.target.pause()}),{threshold:0});
-  document.querySelectorAll('[data-native-play]').forEach(button=>button.addEventListener('click',()=>{
-    const video=button.closest('.player').querySelector('video');button.remove();document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause()});video.play().catch(()=>video.focus());
-  }));
   const videos=[...document.querySelectorAll('#videos video')];
-  videos.forEach((video,index)=>{
-    pauseObserver.observe(video);
-    video.addEventListener('play',()=>{
-      video.closest('.player').querySelector('[data-native-play]')?.remove();
-      videos.forEach(other=>{if(other!==video)other.pause()});
+  const playback=new Map(videos.map(video=>[video,{visible:false,userPaused:false,pending:false,ignoredPauses:0}]));
+  function pauseOutside(video){
+    if(video.paused)return;
+    playback.get(video).ignoredPauses++;
+    video.pause();
+  }
+  function startVisible(video){
+    const state=playback.get(video);
+    if(!state.visible || state.userPaused || state.pending || document.hidden || !video.paused)return;
+    state.pending=true;
+    let interrupted=false;
+    video.play().catch(error=>{
+      // Keep the native controls and play button usable if autoplay is blocked.
+      interrupted=error.name==='AbortError';
+    }).finally(()=>{
+      state.pending=false;
+      if(!state.visible || document.hidden)pauseOutside(video);
+      else if(interrupted)startVisible(video);
     });
-    video.loop=true;
+  }
+  const playbackObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    const state=playback.get(entry.target);
+    state.visible=entry.isIntersecting && entry.intersectionRatio>=.2;
+    if(state.visible)startVisible(entry.target);else pauseOutside(entry.target);
+  }),{threshold:[0,.2],rootMargin:`-${header.offsetHeight}px 0px 0px 0px`});
+  videos.forEach(video=>{
+    const state=playback.get(video);
+    video.muted=true;video.defaultMuted=true;video.loop=true;video.autoplay=true;
+    video.addEventListener('play',()=>{
+      state.userPaused=false;
+      if(!state.visible || document.hidden){pauseOutside(video);return;}
+      video.closest('.player').querySelector('[data-native-play]')?.remove();
+    });
+    video.addEventListener('pause',()=>{
+      if(state.ignoredPauses){state.ignoredPauses--;return;}
+      if(!video.ended)state.userPaused=true;
+    });
+    video.addEventListener('volumechange',()=>{
+      // Muted previews can loop together; only the chosen video has sound.
+      if(!video.muted && video.volume>0)videos.forEach(other=>{if(other!==video)other.muted=true;});
+    });
+    video.addEventListener('ended',()=>{
+      if(state.visible && !state.userPaused && !document.hidden){video.currentTime=0;startVisible(video);}
+    });
+    video.closest('.player').querySelector('[data-native-play]')?.addEventListener('click',()=>{
+      state.userPaused=false;video.muted=false;
+      video.play().catch(()=>video.focus());
+    });
+    playbackObserver.observe(video);
     // Select the page language rather than the browser's stored caption preference.
     const selectLanguage=()=>{
       for(const track of video.textTracks)track.mode=track.language===document.documentElement.lang?'showing':'disabled';
@@ -67,6 +105,10 @@
       });
     });
   });
+  addEventListener('pageshow',()=>videos.forEach(startVisible));
+  document.addEventListener('visibilitychange',()=>videos.forEach(video=>{
+    if(document.hidden)pauseOutside(video);else startVisible(video);
+  }));
   document.querySelectorAll('.gallery-group').forEach(group=>{
     const rail=group.querySelector('.gallery-rail');
     const shift=direction=>rail.scrollBy({left:direction*(rail.querySelector('.frame-button').getBoundingClientRect().width+18),behavior:reduced?'instant':'smooth'});
