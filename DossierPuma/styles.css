@@ -71,7 +71,9 @@ main>section{isolation:isolate;--surface:var(--paper);--previous:var(--paper)}
 .section-wash{position:absolute;left:-20px;right:-20px;top:-70px;height:140px;background:linear-gradient(to bottom,var(--previous),var(--surface));filter:blur(12px);pointer-events:none;z-index:-1}
 #en-escena{--surface:#111310}
 #videos{--previous:#111310;--surface:#191916}
-#adrian{--previous:#191916;--surface:#eeeae1}
+#imagenes{--previous:#191916;--surface:#111310}
+#ficha{--previous:#111310}
+#adrian{--surface:#eeeae1}
 #ficha{--previous:#eeeae1}
 .hero .pattern,.hero::before{-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
 .contact .pattern{-webkit-mask-image:linear-gradient(transparent,#000 14%,#000 78%,transparent);mask-image:linear-gradient(transparent,#000 14%,#000 78%,transparent)}
@@ -80,13 +82,6 @@ main>section{isolation:isolate;--surface:var(--paper);--previous:var(--paper)}
 #en-escena .lunar-drift{opacity:.17;background-size:auto 1600px;background-repeat:repeat-y}
 #adrian .lunar-drift{opacity:.075;transform:scaleX(-1);background-size:100% auto;background-position:50% 20%}
 #ficha .lunar-drift{opacity:.09;background-size:120% auto;background-position:center 75%}
-.organic-photo{position:relative;isolation:isolate}
-.piece-photo.organic-photo{position:sticky}
-.organic-photo img,.organic-window img{-webkit-mask-image:url('assets/organic-window.svg');mask-image:url('assets/organic-window.svg');-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
-.organic-photo::before{content:"";position:absolute;inset:-3% -4% 5%;border:2px solid #345fb529;border-radius:46% 54% 61% 39% / 43% 35% 65% 57%;filter:blur(5px);z-index:-1;pointer-events:none}
-.organic-window{background:transparent;box-shadow:none;overflow:visible;border-radius:0}
-.organic-window img{border-radius:0}
-.organic-window::after{-webkit-mask-image:url('assets/organic-window.svg');mask-image:url('assets/organic-window.svg');-webkit-mask-size:100% 100%;mask-size:100% 100%}
 .press{background:var(--paper);color:#30251f}
 .press .section-top{color:var(--ink)}
 .press .lunar-drift{opacity:.085;background-size:100% auto;background-position:center bottom}
@@ -109,5 +104,11 @@ main>section{isolation:isolate;--surface:var(--paper);--previous:var(--paper)}
 .press-related ul{list-style:none;margin:0;padding:0}
 .press-related li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 0;font-size:15px}
 .press-related time{color:#66564d;font-family:"Courier New",monospace;font-size:12px}
-@media(max-width:700px){.section-wash{top:-45px;height:90px;filter:blur(9px)}.lunar-drift{opacity:.075;background-size:auto 900px}.press-grid{grid-template-columns:1fr}.press-intro{margin-bottom:30px}.press-card{padding:24px 0}.press-card h3{font-size:24px}.press-credit{gap:15px}.press-meta{font-size:11px}.organic-photo::before{filter:blur(3px)}.piece-photo.organic-photo{position:relative}}
+@media(max-width:700px){.section-wash{top:-45px;height:90px;filter:blur(9px)}.lunar-drift{opacity:.075;background-size:auto 900px}.press-grid{grid-template-columns:1fr}.press-intro{margin-bottom:30px}.press-card{padding:24px 0}.press-card h3{font-size:24px}.press-credit{gap:15px}.press-meta{font-size:11px}}
 @media print{.lunar-drift{opacity:.04}.section-wash{display:none}.press-card{break-inside:avoid}.press-related{display:block}}
+
+/* Rounded photographs, matching the film gallery. */
+.images{background:#111310;color:#eeede7}
+.images .frame-gallery{margin-top:0;padding:0}
+.piece-photo img,.scene-opening img,.wide-photo img,.artist-portrait img{border-radius:16px}
+@media(max-width:600px){.piece-photo img,.scene-opening img,.wide-photo img,.artist-portrait img{border-radius:10px}}
