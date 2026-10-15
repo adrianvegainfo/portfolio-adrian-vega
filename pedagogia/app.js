@@ -1,4 +1,83 @@
 const translations = {
+  ca: {
+    skip: "Saltar al contingut",
+    mark: "COS / RECERCA / TRANSMISSIÓ",
+    navApproach: "Enfocament",
+    navPath: "Trajectòria",
+    navVideos: "Vídeos",
+    navContact: "Contacte",
+    heroIndex: "PORTFOLI PEDAGÒGIC / 2026",
+    heroTitle: "Transmetre no és repetir una forma. És crear les condicions perquè aparegui una pràctica pròpia.",
+    heroLead: "Soc Adrián Vega, coreògraf, intèrpret i pedagog. La meva pràctica creua breaking, hip-hop, flamenc, dansa contemporània, floorwork, improvisació, so i imatge.",
+    heroInstitut: "Durant diversos anys he estat professor convidat al Conservatori Professional de Dansa de l’Institut del Teatre de Barcelona, a més d’impartir sessions i laboratoris en contextos artístics, educatius i comunitaris.",
+    watchWork: "Veure les sessions",
+    downloadCv: "Descarregar el CV artístic i pedagògic (en castellà)",
+    approachLabel: "ENFOCAMENT",
+    motivationTitle: "La motivació intrínseca és el punt de partida.",
+    motivationLead: "Per transmetre una pràctica necessito comprendre què mou cada persona des de dins: la seva curiositat, el seu desig, la seva història corporal i la seva manera de relacionar-se amb el repte.",
+    motivationText: "No treballo des de la reproducció d’un model únic. Proposo eines, imatges, ritmes i situacions que permeten investigar. L’empatia neix d’observar sense imposar, adaptar la proposta a diferents nivells i acompanyar l’autonomia fins que cada participant reconeix quines decisions li pertanyen.",
+    principle1Title: "Escoltar",
+    principle1Text: "Llegir el grup, els seus ritmes i allò que ja sap abans de proposar una direcció.",
+    principle2Title: "Activar",
+    principle2Text: "Plantejar consignes capaces de despertar curiositat i desig de moviment.",
+    principle3Title: "Relacionar",
+    principle3Text: "Connectar tècnica, imaginació, ritme, espai i experiència personal.",
+    principle4Title: "Acompanyar",
+    principle4Text: "Donar estructura al procés sense ocupar el lloc de les decisions pròpies.",
+    pathLabel: "TRAJECTÒRIA",
+    pathTitle: "Més de dues dècades aprenent, creant i compartint moviment.",
+    path1Title: "Una pràctica corporal continuada",
+    path1Text: "Formació i pràctica en breaking, danses urbanes, dansa contemporània, flamenc i improvisació. La transmissió neix de continuar sent alumne i de revisar constantment les pròpies eines.",
+    path2Text: "Cofundador i codirector artístic. Desenvolupament col·lectiu de les sessions d’Urban Dances, Theatrical Breakin i TOOL BÄKS: tècnica, creació, improvisació i teatralitat des dels codis de les danses urbanes.",
+    path3Text: "Estudis superiors de Coreografia i, posteriorment, professor convidat durant diversos anys al Conservatori Professional de Dansa. Un diàleg sostingut entre formació, creació i transmissió.",
+    path4Text: "Procés de creació i mediació al llarg d’un curs complet amb alumnat de l’Institut Maria Espinalt, posant en relació pràctica corporal, escolta, autoria i presentació pública.",
+    today: "AVUI",
+    path5Title: "Formats propis i contextos internacionals",
+    path5Text: "Flamenco invertido, Convertirse en imagen, Escuchar el espacio, Floorwork Studies i Sci-Fi Motion: Digital Bodies. Sessions i laboratoris a Tanzhaus NRW, Dance Colony, festivals, centres de creació i espais educatius.",
+    featuredLabel: "PROCÉS DESTACAT",
+    featuredText: "Treballar durant un curs permet que la confiança, la responsabilitat i la veu pròpia apareguin sense pressa. El procés no separa creació i aprenentatge: cada decisió escènica es converteix en una eina per comprendre com es construeix una obra comuna.",
+    playVideo: "REPRODUIR EL VÍDEO",
+    archiveLabel: "ARXIU AUDIOVISUAL",
+    archiveTitle: "Sessions, eines i processos de transmissió.",
+    play: "VEURE",
+    floorworkText: "Pes, suports, continuïtat i relació amb el terra com a camp de recerca compartida.",
+    imageText: "El cos com a productor i receptor d’imatges: enquadrament, percepció, presència i composició.",
+    flamencoText: "Una recerca que desplaça codis, ritmes i qualitats del flamenc cap a altres organitzacions corporals.",
+    urbanText: "Fonaments de breaking, popping i hip-hop experimental com a llenguatges de moviment i pensament.",
+    theatricalText: "Del vocabulari tècnic a l’escena: presència, relació, composició i imaginació col·lectiva.",
+    toolsText: "Un espai obert per compartir eines de recerca, improvisació i creació des de les danses urbanes.",
+    institutVideoText: "Recerca grupal del breaking com a material coreogràfic, relacional i teatral.",
+    residenciaText: "Creació, educació i mediació articulades en un procés llarg amb presentació pública.",
+    contactLabel: "CONTACTE",
+    contactTitle: "Cada grup necessita una porta d’entrada diferent.",
+    contactText: "Disponible per a sessions, laboratoris, processos de mediació, acompanyament de creació i docència en conservatoris, centres educatius, festivals i espais de recerca.",
+    location: "Brussel·les, Bèlgica · Disponibilitat internacional",
+    backSite: "Tornar al web principal",
+    technicalSite: "Portfoli tècnic",
+    homeLabel: "Adrián Vega — Inici",
+    navLabel: "Navegació principal",
+    languageLabel: "Idioma",
+    principlesLabel: "Principis pedagògics",
+    floorworkMeta: "PRÀCTICA / FLOORWORK",
+    imageMeta: "IMATGE / COMPOSICIÓ",
+    flamencoMeta: "FLAMENC / INVERSIÓ",
+    featuredAlt: "Alumnat durant el procés EN RESiDÈNCiA",
+    floorworkAlt: "Participants investigant el treball de terra",
+    flamencoAlt: "Adrián Vega impartint Flamenco invertido",
+    urbanAlt: "Urban Dances Workshop d’Iron Skulls Co",
+    fabraAlt: "Theatrical Breakin Workshop a Fabra i Coats",
+    institutAlt: "Theatrical Breakin Workshop a l’Institut del Teatre",
+    residenciaAlt: "Procés pedagògic EN RESiDÈNCiA",
+    featuredPlay: "Reproduir Adrián Vega EN RESiDÈNCiA",
+    floorworkPlay: "Reproduir Floorwork Studies",
+    imagePlay: "Reproduir Convertirse en imagen",
+    flamencoPlay: "Reproduir Flamenco invertido",
+    urbanPlay: "Reproduir Urban Dances Workshop",
+    fabraPlay: "Reproduir Theatrical Breakin Fabra i Coats",
+    toolsPlay: "Reproduir TOOL BÄKS",
+    institutPlay: "Reproduir Theatrical Breakin Institut del Teatre",
+    residenciaPlay: "Reproduir EN RESiDÈNCiA"
+  },
   fr: {
     skip:"Aller au contenu",mark:"CORPS / RECHERCHE / TRANSMISSION",navApproach:"Approche",navPath:"Parcours",navVideos:"Vidéos",navContact:"Contact",heroIndex:"PORTFOLIO PÉDAGOGIQUE / 2026",heroTitle:"Transmettre, ce n’est pas répéter une forme. C’est créer les conditions pour qu’une pratique propre apparaisse.",heroLead:"Je suis Adrián Vega, chorégraphe, interprète et pédagogue. Ma pratique croise breaking, hip-hop, flamenco, danse contemporaine, floorwork, improvisation, son et image.",heroInstitut:"Pendant plusieurs années, j’ai été professeur invité au Conservatoire professionnel de danse de l’Institut del Teatre de Barcelone, parallèlement à des ateliers et laboratoires dans des contextes artistiques, éducatifs et communautaires.",watchWork:"Voir les workshops",downloadCv:"Télécharger le CV artistique et pédagogique",approachLabel:"APPROCHE",motivationTitle:"La motivation intrinsèque est le point de départ.",motivationLead:"Pour transmettre une pratique, je dois comprendre ce qui anime chaque personne de l’intérieur : sa curiosité, son désir, son histoire corporelle et sa manière d’aborder le défi.",motivationText:"Je ne travaille pas à partir de la reproduction d’un modèle unique. Je propose des outils, images, rythmes et situations qui permettent de chercher. L’empathie naît de l’observation sans imposition, de l’adaptation aux différents niveaux et de l’accompagnement de l’autonomie jusqu’à ce que chaque participant reconnaisse les décisions qui lui appartiennent.",principle1Title:"Écouter",principle1Text:"Lire le groupe, ses rythmes et ses acquis avant de proposer une direction.",principle2Title:"Activer",principle2Text:"Proposer des consignes capables d’éveiller la curiosité et le désir de mouvement.",principle3Title:"Relier",principle3Text:"Relier technique, imagination, rythme, espace et expérience personnelle.",principle4Title:"Accompagner",principle4Text:"Structurer le processus sans prendre la place des décisions personnelles.",pathLabel:"PARCOURS",pathTitle:"Plus de deux décennies à apprendre, créer et partager le mouvement.",path1Title:"Une pratique corporelle continue",path1Text:"Formation et pratique en breaking, danses urbaines, danse contemporaine, flamenco et improvisation. La transmission naît du fait de rester élève et de réexaminer constamment ses propres outils.",path2Text:"Cofondateur et codirecteur artistique. Développement collectif des workshops Urban Dances, Theatrical Breakin et TOOL BÄKS : technique, création, improvisation et théâtralité à partir des codes des danses urbaines.",path3Text:"Études supérieures de chorégraphie puis professeur invité pendant plusieurs années au Conservatoire professionnel de danse. Un dialogue durable entre formation, création et transmission.",path4Text:"Processus de création et de médiation sur une année scolaire avec les élèves de l’Institut Maria Espinalt, reliant pratique corporelle, écoute, autonomie d’auteur et présentation publique.",today:"AUJOURD’HUI",path5Title:"Formats personnels et contextes internationaux",path5Text:"Flamenco invertido, Convertirse en imagen, Escuchar el espacio, Floorwork Studies et Sci-Fi Motion: Digital Bodies. Workshops et laboratoires à Tanzhaus NRW, Dance Colony, dans des festivals, centres de création et espaces éducatifs.",featuredLabel:"PROCESSUS PHARE",featuredText:"Travailler durant une année scolaire permet à la confiance, à la responsabilité et à la voix propre d’émerger sans précipitation. Le processus ne sépare pas création et apprentissage : chaque décision scénique devient un outil pour comprendre comment se construit une œuvre commune.",playVideo:"LIRE LA VIDÉO",archiveLabel:"ARCHIVE AUDIOVISUELLE",archiveTitle:"Workshops, outils et processus de transmission.",play:"VOIR",floorworkText:"Poids, appuis, continuité et relation au sol comme terrain de recherche partagé.",imageText:"Le corps comme producteur et récepteur d’images : cadrage, perception, présence et composition.",flamencoText:"Une recherche qui déplace codes, rythmes et qualités du flamenco vers d’autres organisations corporelles.",urbanText:"Fondements du breaking, du popping et du hip-hop expérimental comme langages de mouvement et de pensée.",theatricalText:"Du vocabulaire technique à la scène : présence, relation, composition et imagination collective.",toolsText:"Un espace ouvert pour partager des outils de recherche, d’improvisation et de création issus des danses urbaines.",institutVideoText:"Recherche collective autour du breaking comme matériau chorégraphique, relationnel et théâtral.",residenciaText:"Création, éducation et médiation articulées dans un processus long avec présentation publique.",contactLabel:"CONTACT",contactTitle:"Chaque groupe a besoin d’une porte d’entrée différente.",contactText:"Disponible pour workshops, laboratoires, médiation, accompagnement de création et enseignement dans les conservatoires, écoles, festivals et espaces de recherche.",location:"Bruxelles, Belgique · Disponibilité internationale",backSite:"Retour au site principal",technicalSite:"Portfolio technique"
   },
@@ -7,10 +86,11 @@ const translations = {
   }
 };
 const spanish=Object.fromEntries([...document.querySelectorAll("[data-i18n]")].map((node)=>[node.dataset.i18n,node.innerHTML]));
-const cvFiles={es:"Adrian_Vega_CV_Artistico_Pedagogico_ES.pdf",fr:"Adrian_Vega_CV_Artistique_Pedagogique_FR.pdf",nl:"Adrian_Vega_CV_Artistiek_Pedagogisch_NL.pdf"};
-const titles={es:"Adrián Vega — Portfolio pedagógico",fr:"Adrián Vega — Portfolio pédagogique",nl:"Adrián Vega — Pedagogisch portfolio"};
-function setLanguage(lang){const dictionary=lang==="es"?spanish:translations[lang];document.documentElement.lang=lang==="nl"?"nl-BE":lang;document.title=titles[lang];document.querySelectorAll("[data-i18n]").forEach((node)=>{if(dictionary[node.dataset.i18n])node.innerHTML=dictionary[node.dataset.i18n]});document.querySelectorAll("[data-lang]").forEach((button)=>button.setAttribute("aria-pressed",String(button.dataset.lang===lang)));document.querySelectorAll(".cv-link").forEach((link)=>{link.href=`../assets/pedagogy/${cvFiles[lang]}`});localStorage.setItem("pedagogy-portfolio-language",lang)}
+const attributeTranslations=[...document.querySelectorAll("[data-i18n-aria-label], [data-i18n-alt]")].flatMap(node=>["aria-label","alt"].filter(attribute=>node.hasAttribute("data-i18n-"+attribute)).map(attribute=>({node,attribute,key:node.getAttribute("data-i18n-"+attribute),original:node.getAttribute(attribute)})));
+const cvFiles={es:"Adrian_Vega_CV_Artistico_Pedagogico_ES.pdf",ca:"Adrian_Vega_CV_Artistico_Pedagogico_ES.pdf",fr:"Adrian_Vega_CV_Artistique_Pedagogique_FR.pdf",nl:"Adrian_Vega_CV_Artistiek_Pedagogisch_NL.pdf"};
+const titles={es:"Adrián Vega — Portfolio pedagógico",ca:"Adrián Vega — Portfoli pedagògic",fr:"Adrián Vega — Portfolio pédagogique",nl:"Adrián Vega — Pedagogisch portfolio"};
+function setLanguage(lang){if(!Object.hasOwn(titles,lang))return;const dictionary=lang==="es"?spanish:translations[lang];document.documentElement.lang=lang==="nl"?"nl-BE":lang;document.title=titles[lang];document.querySelectorAll("[data-i18n]").forEach(node=>{node.innerHTML=dictionary[node.dataset.i18n]??spanish[node.dataset.i18n]});attributeTranslations.forEach(({node,attribute,key,original})=>node.setAttribute(attribute,dictionary[key]??original));document.querySelectorAll("[data-lang]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.lang===lang)));document.querySelectorAll(".cv-link").forEach(link=>{link.href=`../assets/pedagogy/${cvFiles[lang]}`});localStorage.setItem("pedagogy-portfolio-language",lang);const url=new URL(location.href);url.searchParams.set("lang",lang);history.replaceState(null,"",url)}
 document.querySelectorAll("[data-lang]").forEach((button)=>button.addEventListener("click",()=>setLanguage(button.dataset.lang)));
 document.querySelectorAll(".video-poster").forEach((button)=>button.addEventListener("click",()=>{const iframe=document.createElement("iframe");iframe.src=`https://www.youtube-nocookie.com/embed/${button.dataset.video}?autoplay=1&rel=0`;iframe.title=button.getAttribute("aria-label");iframe.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";iframe.allowFullscreen=true;button.classList.add("playing");button.replaceChildren(iframe)}));
 const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}})},{threshold:.08});document.querySelectorAll(".reveal").forEach((element)=>observer.observe(element));
-const preferred=localStorage.getItem("pedagogy-portfolio-language");if(["es","fr","nl"].includes(preferred))setLanguage(preferred);
+const requested=new URLSearchParams(location.search).get("lang");const preferred=Object.hasOwn(titles,requested)?requested:localStorage.getItem("pedagogy-portfolio-language");if(Object.hasOwn(titles,preferred))setLanguage(preferred);
