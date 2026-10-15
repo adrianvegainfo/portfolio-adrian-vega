@@ -752,7 +752,7 @@
       </aside>
       <div class="window-meta">
         <span>${folder.action[state.lang]}</span>
-        <span>${ui().language}: ${state.lang.toUpperCase()}</span>
+        <span>${ui().language}: ${({es:"CAS",ca:"CAT"}[state.lang] || state.lang.toUpperCase())}</span>
       </div>`;
     win.querySelectorAll("[data-tab]").forEach((button) => {
       button.addEventListener("click", () => {
