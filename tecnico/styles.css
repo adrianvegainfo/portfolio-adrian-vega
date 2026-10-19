@@ -121,6 +121,8 @@ figcaption { padding-top: .65rem; color: var(--muted); font: .65rem/1.4 var(--mo
 .project-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; padding-top: clamp(5rem, 10vw, 10rem); padding-bottom: clamp(5rem, 10vw, 10rem); background: var(--line); }
 .project-card { min-width: 0; padding: clamp(1.5rem, 4vw, 4rem); background: var(--bg); }
 .project-card figure { height: min(44vw, 40rem); margin: 2rem 0 2.5rem; overflow: hidden; }
+.project-card figure.puma-overview { height: auto; scroll-margin-top: 7rem; }
+.project-card .puma-overview img { height: auto; }
 .project-card h2 { font-size: clamp(2.2rem, 4vw, 4.3rem); }
 .project-card .project-meta { margin: 1rem 0 2.5rem; text-align: left; }
 .project-card h3 { margin-top: 2.5rem; }
