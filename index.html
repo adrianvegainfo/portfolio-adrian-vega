@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adrián Vega | Coreógrafo, intérprete y artista visual</title>
+    <title>Adrian Vega | Choreographer, Performer and Visual Artist</title>
     <meta
       name="description"
-      content="Portfolio de Adrián Vega: coreografía, interpretación y artes visuales. Obras, vídeos, trayectoria, pedagogía y contacto."
+      content="Official website of Adrian Vega, choreographer, performer and visual artist working across post Hip Hop, contemporary dance, flamenco footwork, sound, moving image, pedagogy and body archive."
     >
-    <meta property="og:title" content="Adrián Vega | Coreógrafo, intérprete y artista visual">
-    <meta property="og:description" content="Obras, pedagogía, apoyos, biografía e investigación actual de Adrián Vega.">
+    <meta property="og:title" content="Adrian Vega | Choreographer, Performer and Visual Artist">
+    <meta property="og:description" content="Works, education projects, supports, biography and current research by Adrian Vega.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.adrianvega.art/">
     <meta property="og:image" content="./assets/sampling-visual/muestra-proyeccion-mylar-publico.jpg">
@@ -28,34 +28,138 @@
         "knowsAbout": ["post Hip Hop", "contemporary dance", "flamenco footwork", "performance", "moving image", "sound", "pedagogy", "artistic residencies", "research grants"]
       }
     </script>
-    <link rel="stylesheet" href="./portfolio.css?v=20261020">
+    <link rel="stylesheet" href="./sampling-v2.css?v=20260710-supports-contexts">
   </head>
   <body>
-    <a class="skip-link" href="#main">Ir al contenido</a>
-    <header class="site-header">
-      <a class="brand" href="#main">ADRIÁN VEGA</a>
-      <label class="language-label"><span data-language-label>Idioma</span>
-        <select aria-label="Idioma" id="language">
-          <option value="es">Castellano</option><option value="en">English</option>
-          <option value="ca">Català</option><option value="fr">Français</option><option value="nl">Nederlands</option>
-        </select>
-      </label>
-    </header>
-    <main id="main">
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="intro-copy">
-          <p class="eyebrow" data-role>Coreografía · Interpretación · Artes visuales</p>
-          <h1 id="intro-title">Adrián<br>Vega</h1>
-          <p class="intro-text" data-intro>Adrián Vega es coreógrafo, intérprete y artista visual. Su práctica reúne post Hip Hop, danza contemporánea, zapateado flamenco, sonido e imagen en movimiento, con el cuerpo como archivo.</p>
-          <a class="contact-link" href="mailto:adrianvega.info@gmail.com" data-contact>Contacto ↗</a>
+    <div class="boot" data-boot role="dialog" aria-label="Choose Adrian Vega mode">
+      <img class="boot-image" src="./assets/loading-tv-congelada.png" alt="">
+      <div class="boot-log">
+        <span class="boot-title">Loading...</span>
+        <span>Adrian Vega...</span>
+        <span>loading body archive...</span>
+        <span>opening performance mode...</span>
+        <span>opening works, education and bio...</span>
+        <div class="boot-actions" aria-label="Choose how to enter the dossier">
+          <button
+            class="boot-choice"
+            type="button"
+            data-boot-choice="read"
+            data-boot-description="Start with the complete dossier. Clearer for mobile, reading and sending."
+          >
+            Read Mode
+            <small>Dossier first / clean reading</small>
+          </button>
+          <button
+            class="boot-choice"
+            type="button"
+            data-boot-choice="interactive"
+            data-boot-description="Open the desktop app-performance: boxes, windows, movement and shuffle."
+          >
+            Interactive Mode
+            <small>Desktop app / boxes / signal</small>
+          </button>
         </div>
-        <figure class="intro-image"><img src="./assets/sampling-visual/muestra-proyeccion-mylar-publico.jpg" alt="Adrián Vega en escena, entre proyección, mylar y público" width="1200" height="800" fetchpriority="high"></figure>
+        <p class="boot-hint" data-boot-hint>Hover or touch a mode to preview. Click to enter.</p>
+      </div>
+    </div>
+
+    <div class="cursor-tag" aria-hidden="true" data-cursor-tag>sampling</div>
+    <div class="signal-line" aria-hidden="true" data-signal-line></div>
+
+    <header class="topbar">
+      <a class="brand" href="#desktop" data-cursor-label="Adrian Vega">ADRIAN VEGA / PERFORMANCE MODE</a>
+      <nav aria-label="Main navigation" data-nav></nav>
+      <div class="toolbar">
+        <button class="mode-button mode-switch" type="button" data-reading-toggle>INTERACTIVE MODE</button>
+        <div class="language-menu">
+          <button class="icon-button" type="button" data-language-toggle aria-label="Language" aria-expanded="false">&#9678;</button>
+          <div class="language-switcher" role="group" aria-label="Language" hidden>
+            <button type="button" data-lang="es" aria-label="Castellano">CAS</button>
+            <button type="button" data-lang="ca" aria-label="Català">CAT</button>
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="fr">FR</button>
+            <button type="button" data-lang="nl">NL</button>
+          </div>
+        </div>
+        <button class="icon-button" type="button" data-performance-toggle aria-label="Dark mode">&#9680;</button>
+      </div>
+    </header>
+
+    <main id="desktop">
+      <section class="desktop-hero" data-hero>
+        <div class="autoplay-frame" aria-hidden="true">
+          <iframe
+            src="https://www.youtube.com/embed/pkP5lEjQFqI?autoplay=1&mute=1&controls=0&loop=1&playlist=pkP5lEjQFqI&modestbranding=1&playsinline=1"
+            title="Adrian Vega research loop"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <figure class="hero-image">
+          <img
+            src="./assets/sampling-visual/muestra-proyeccion-mylar-publico.jpg"
+            alt="Adrian Vega performance research with projection, mylar and body"
+            data-edit-image
+            data-edit-id="hero-image"
+          >
+        </figure>
+
+        <div class="hero-copy">
+          <p class="sysline">C:/ADRIAN_VEGA/PERFORMANCE_MODE</p>
+          <h1 data-hero-title data-edit-text data-edit-id="hero-title">Adrian Vega</h1>
+          <p data-hero-description data-edit-text data-edit-id="hero-description"></p>
+          <div class="tag-list" aria-label="Keywords">
+            <span>body archive</span>
+            <span>works</span>
+            <span>education</span>
+            <span>moving image</span>
+            <span>Sampling</span>
+          </div>
+        </div>
+
+        <div class="status-panel" data-status-panel></div>
+        <div class="folder-stage" data-folder-stage aria-label="Interactive dossier folders"></div>
+        <button class="shuffle-button desktop-shuffle" type="button" data-shuffle>SHUFFLE DESKTOP</button>
+        <button class="video-peek" type="button" data-video-peek aria-label="Reveal research video">VIDEO SIGNAL</button>
       </section>
-      <div id="works"></div>
-      <noscript><p>Para consultar el portfolio completo, activa JavaScript. Contacto: <a href="mailto:adrianvega.info@gmail.com">adrianvega.info@gmail.com</a>.</p></noscript>
+
+      <section class="marquee living-marquee" aria-label="Keywords">
+        <div class="living-marquee-track">
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+          <span>archive body image archive body image</span>
+        </div>
+      </section>
+
+      <section class="reading-view" data-reading-view aria-live="polite"></section>
     </main>
-    <footer class="site-footer"><strong>Adrián Vega</strong><a href="mailto:adrianvega.info@gmail.com">adrianvega.info@gmail.com</a><a href="#main" data-top>Volver arriba ↑</a></footer>
-    <script src="./portfolio-content.js?v=20261020"></script>
-    <script src="./portfolio.js?v=20261020"></script>
+
+    <div class="desktop-layer" data-desktop-layer aria-live="polite"></div>
+
+    <footer class="site-footer">
+      <strong>Adrian Vega</strong>
+      <a href="https://adrianvegainfo.github.io/portfolio-adrian-vega/#trajectory" target="_blank" rel="noreferrer">Portfolio</a>
+      <a href="./tecnico/">Technical lighting portfolio</a>
+      <a href="./pedagogia/">Pedagogy and workshops portfolio</a>
+      <a href="https://www.adrianvega.art/sampling-production/">Sampling production dossier</a>
+      <a href="https://adrianvega.art/" target="_blank" rel="noreferrer">adrianvega.art</a>
+    </footer>
+
+    <div class="edit-panel" aria-label="Local editor" hidden>
+      <button type="button" data-edit-toggle>EDITAR</button>
+      <button type="button" data-edit-save>GUARDAR</button>
+      <button type="button" data-edit-export>EXPORTAR</button>
+      <button type="button" data-edit-import>IMPORTAR</button>
+      <button type="button" data-edit-clear>RESTAURAR</button>
+      <span data-edit-status>VISTA</span>
+    </div>
+    <input type="file" accept="image/*" data-image-picker hidden>
+    <input type="file" accept="application/json,.json" data-edit-import-picker hidden>
+
+    <script src="./sampling-content.js?v=20260710-five-languages"></script>
+    <script src="./sampling-app.js?v=20261015-cas-cat"></script>
   </body>
 </html>

@@ -1,17 +1,12 @@
-# Adrián Vega — portfolio
+# Sampling.metarage v2
 
-Public URL: https://www.adrianvega.art/
+Interactive web dossier for Sampling / Metalab by Adrián Vega.
 
-The homepage is a single continuous portfolio with Spanish as its default language.
-The language selector also supports English, Catalan, French and Dutch; `?lang=en`
-(or `es`, `ca`, `fr`, `nl`) provides a direct language link.
+Public URL: https://adrianvegainfo.github.io/Sampling.metarage/
 
-- `index.html`: introduction, language selector and contact.
-- `portfolio-content.js`: translated works, education, supports and biography.
-- `portfolio.js`: sections, language selection and video players loaded on click.
-- `portfolio.css`: responsive layout and existing cream/black/lime palette.
+Local URL: http://127.0.0.1:4173/
 
-Serve the repository with a static HTTP server for preview. Pushes to `main`
-publish through the existing GitHub Pages workflow, including all dossier subpages.
-The earlier `sampling-*` files are retained as source history and are no longer
-loaded by the homepage.
+- Global French, Dutch and English content.
+- Seven draggable dossier folders with unique tabbed windows.
+- Linear reading mode.
+- Local multilingual text and image editor.
