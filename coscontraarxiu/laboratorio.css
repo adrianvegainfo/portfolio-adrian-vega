@@ -1,8 +1,7 @@
 /* Adaptation of the retained Puma dossier, with its original CSS loaded first. */
 .hero{min-height:calc(100svh - var(--header));padding-top:clamp(50px,7vh,80px)}
-.hero-lab-media{position:absolute;z-index:-2;top:5%;right:var(--space);bottom:5%;width:43%;margin:0;-webkit-mask-image:linear-gradient(transparent,#000 5%,#000 94%,transparent);mask-image:linear-gradient(transparent,#000 5%,#000 94%,transparent)}
-.hero-lab-main{width:100%;height:100%;object-fit:cover;object-position:50% 44%;border-radius:16px;transform:rotate(2deg)}
-.hero-lab-inset{position:absolute;width:45%;height:44%;object-fit:cover;object-position:50% 60%;left:4%;bottom:9%;border:7px solid var(--paper);border-radius:14px;transform:rotate(-7deg);box-shadow:0 10px 30px #30251f30}
+.hero-lab-media{position:absolute;z-index:-2;top:15%;right:var(--space);bottom:10%;width:65%;margin:0;-webkit-mask-image:linear-gradient(transparent,#000 5%,#000 94%,transparent);mask-image:linear-gradient(transparent,#000 5%,#000 94%,transparent)}
+.hero-lab-main{width:100%;height:100%;object-fit:cover;object-position:43% 50%;border-radius:16px;transform:rotate(2deg)}
 .hero-lab-media figcaption{position:absolute;right:0;bottom:0;background:var(--paper);color:#30251f;padding:9px 12px;font:10px/1.4 "Courier New",monospace;max-width:32ch}
 .hero::before{-webkit-mask-image:none;mask-image:none;background:linear-gradient(90deg,#f4f2ed 0%,#f4f2edfa 34%,#f4f2ede8 49%,#f4f2ed80 69%,#f4f2ed10 100%)}
 .hero-title-stack{position:relative;margin:22px 0 25px;max-width:1350px;min-height:clamp(180px,21vw,290px)}
@@ -84,9 +83,8 @@
  .nav{scroll-padding-inline:18px;overscroll-behavior-x:contain}
  .archive-link a,.contact-details a,.closing a,.closing button{min-height:44px;display:inline-flex;align-items:center}
  .hero{padding-top:48px;padding-bottom:30px;min-height:calc(100svh - var(--header))}
- .hero-lab-media{top:13%;right:-6%;bottom:21%;width:70%;opacity:.65}
+ .hero-lab-media{top:23%;right:-8%;bottom:20%;width:95%;opacity:.65}
  .hero-lab-main{transform:rotate(3deg);border-radius:12px}
- .hero-lab-inset{left:4%;bottom:8%;width:48%;height:39%;border-width:5px;border-radius:10px}
  .hero-lab-media figcaption{display:none}
  .hero::before{background:linear-gradient(90deg,#f4f2edf7,#f4f2edce 40%,#f4f2ed66 100%)}
  .hero h1{font-size:12.5vw;line-height:.98;letter-spacing:-.08em;-webkit-text-stroke:.6px}
@@ -135,7 +133,7 @@
  .piece-photo,.artist-portrait{position:static}.piece-photo img{max-height:250px;width:auto}
  .workshop-player{max-height:260px}.video-grid{grid-template-columns:1fr 1fr;gap:25px}
  .contact .pattern,.hero .pattern{opacity:.15}.contact-details{margin-bottom:30px}
- .hero-lab-media{opacity:.2}.hero-lab-inset{display:none}.archive-link{break-inside:avoid}
+ .hero-lab-media{opacity:.2}.archive-link{break-inside:avoid}
  .contact h2{font-size:28pt}.hero h1,.section-top h2{filter:none}
  .experience .experience-number{color:#c33312;font-size:38pt}
 }
