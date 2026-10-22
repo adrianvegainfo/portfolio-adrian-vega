@@ -14,7 +14,8 @@
 .section-title-stack{max-width:100%;margin-right:0!important}
 .section-handwritten{position:absolute;left:3%;top:-17%;width:96%;height:130%;object-fit:contain;overflow:hidden;transform:rotate(-5deg);pointer-events:none}
 .section-top{padding-top:15px;padding-bottom:24px;margin-bottom:38px}
-.piece-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#dbd7ca}
+.piece-photo{min-width:0;width:100%}
+.piece-photo img{width:100%;max-width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#dbd7ca}
 #laboratorio .lunar-drift{background-position:80% 30%;background-size:110% auto}
 .question-section{--surface:#111310;color:var(--paper)}
 .question-section .section-top{color:var(--ink)}
