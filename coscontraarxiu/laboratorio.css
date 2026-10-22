@@ -14,7 +14,7 @@
 .section-title-stack{max-width:100%;margin-right:0!important}
 .section-handwritten{position:absolute;left:3%;top:-17%;width:96%;height:130%;object-fit:contain;overflow:hidden;transform:rotate(-5deg);pointer-events:none}
 .section-top{padding-top:15px;padding-bottom:24px;margin-bottom:38px}
-.piece-photo img{aspect-ratio:480/848;object-fit:contain;max-height:650px;background:#dbd7ca}
+.piece-photo img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#dbd7ca}
 #laboratorio .lunar-drift{background-position:80% 30%;background-size:110% auto}
 .question-section{--surface:#111310;color:var(--paper)}
 .question-section .section-top{color:var(--ink)}
@@ -27,6 +27,10 @@
 .sampling-copy{margin-top:70px;padding-top:28px;border-top:1px solid #f4f2ed55;display:grid;grid-template-columns:.65fr 1.35fr;gap:40px}
 .sampling-copy .eyebrow{color:#ffa18a;font-weight:700}
 .sampling-copy .prose{font-size:17px;color:#e0e1d9}
+.democracy-questions{margin-top:48px;padding-top:26px;border-top:1px solid #f4f2ed55}
+.democracy-questions h3{font-family:Georgia,serif;font-size:clamp(25px,2.5vw,34px);font-style:italic;line-height:1.2;margin:0 0 26px;color:#ffa18a}
+.democracy-questions ul{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px;margin:0;padding:0}
+.democracy-questions li{font-family:Georgia,serif;font-size:clamp(23px,2.5vw,32px);line-height:1.3;max-width:30ch;color:var(--paper);padding-left:18px;border-left:2px solid #ff795b}
 .practice{--previous:#111310}
 .practice .facts-intro{max-width:40ch;font-size:clamp(24px,2.7vw,37px)}
 .practice-list{list-style:none;margin:0;padding:0;max-width:1150px}
@@ -35,6 +39,17 @@
 .step-handwritten{position:absolute;left:-3%;top:-.21em;width:106%;height:1.4em;overflow:hidden;transform:rotate(-7deg);pointer-events:none}
 .practice-list h3{font-family:Georgia,serif;font-size:clamp(25px,2.7vw,36px);font-style:italic;line-height:1.15;margin:0 0 15px}
 .practice-list p{font-size:18px;line-height:1.6;max-width:70ch;margin:0}
+.practice-depth{margin:24px 0 36px;padding-top:28px;border-top:1px solid var(--line)}
+.practice-depth h3{font-family:Georgia,serif;font-size:clamp(25px,2.7vw,36px);font-style:italic;line-height:1.2;margin:0 0 18px}
+.practice-depth p{font-size:18px;line-height:1.6;max-width:75ch;margin:0}
+.practice-archive{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin:0 0 32px;align-items:start}
+.practice-archive figure{min-width:0;margin:0}
+.practice-photo-button{position:relative;display:block;width:100%;padding:0;border:0;border-radius:16px;background:transparent;color:white;cursor:zoom-in}
+.practice-photo-button img{display:block;width:100%;height:auto;border-radius:16px}
+.practice-photo-button span{position:absolute;bottom:10px;right:10px;padding:9px 12px;border-radius:4px;background:#191916de;font:11px/1.4 "Courier New",monospace}
+.practice-photo-button:focus-visible{outline:3px solid #3b67b7;outline-offset:5px}
+.practice-archive figcaption{margin-top:12px;letter-spacing:.025em;line-height:1.5}
+.practice-archive-note{grid-column:1/-1;font-size:14px;line-height:1.55;max-width:80ch;margin:0}
 .optional-note{font-size:16px;line-height:1.6;max-width:90ch;margin:30px 0 60px;padding-left:20px;border-left:3px solid #3b67b7}
 .objectives{display:grid;grid-template-columns:.65fr 1.35fr;gap:40px;padding-top:28px;border-top:2px solid var(--ink)}
 .objectives h3,.teacher-copy h3{font-size:clamp(25px,2.5vw,34px);font-family:Georgia,serif;font-style:italic;margin:0 0 25px;line-height:1.2}
@@ -109,17 +124,19 @@
  .hero-bottom{font-size:9px;gap:16px;align-items:flex-start}
  .section-handwritten{left:2%;top:-12%;width:96%;height:130%}
  .section-top h2{font-size:clamp(36px,9vw,58px);line-height:.95}
- .piece-photo{max-width:400px;justify-self:center}
- .piece-photo img{max-height:580px;width:auto;max-width:100%}
+ .piece-photo{max-width:500px;justify-self:center}
+ .piece-photo img{width:100%;height:auto;max-width:100%}
  .main-question{margin:40px 0;font-size:clamp(36px,10.1vw,65px);line-height:1.07;max-width:18ch}
  .question-grid,.sampling-copy,.objectives{grid-template-columns:1fr;gap:24px}
  .question-grid .prose{font-size:17px}
  .second-question{font-size:30px;max-width:26ch}
  .sampling-copy{margin-top:45px;gap:0}
  .sampling-copy .eyebrow{margin-bottom:20px}
+ .democracy-questions{margin-top:36px}.democracy-questions ul{grid-template-columns:minmax(0,1fr);gap:24px}.democracy-questions li{font-size:25px;max-width:100%}
  .practice-list li{grid-template-columns:48px 1fr;gap:15px;padding:25px 0}
  .step-number{font-size:38px}.practice-list p{font-size:17px}
  .optional-note{margin:25px 0 45px;font-size:15px}
+ .practice-depth p{font-size:17px}.practice-archive{grid-template-columns:minmax(0,1fr);gap:28px}.practice-photo-button,.practice-photo-button img{border-radius:10px}.practice-archive-note{font-size:14px}
  .objectives{gap:0}.objectives ul{font-size:17px}
  .video-grid{gap:45px}.workshop-player{max-height:600px}
  .media-context{font-size:17px}
@@ -147,4 +164,6 @@
  .hero-lab-media{opacity:.2}.archive-link{break-inside:avoid}
  .contact h2{font-size:28pt}.hero h1,.section-top h2{filter:none}
  .experience .experience-number{color:#c33312;font-size:38pt}
+ .democracy-questions h3,.democracy-questions li{color:#30251f}.democracy-questions li{border-left-color:#c33312}.democracy-questions{border-top-color:#30251f55}
+ .practice-depth,.practice-archive figure{break-inside:avoid}.practice-archive{grid-template-columns:1fr 1fr}.practice-photo-button span{display:none}
 }
