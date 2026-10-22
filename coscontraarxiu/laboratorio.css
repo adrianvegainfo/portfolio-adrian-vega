@@ -58,6 +58,11 @@
 .objectives li{margin:0 0 16px;padding-left:7px}
 #videos{--previous:var(--paper);--surface:#191916}
 .media-context{font-size:18px;line-height:1.6;max-width:78ch;margin:0 0 45px;color:#e0e1d9}
+.metro-archive{margin:0 0 45px}
+.metro-archive>h3{font-family:Georgia,serif;font-style:italic;font-size:clamp(26px,3vw,38px);font-weight:500;line-height:1.2;margin:0 0 14px}
+.metro-photos{max-width:1000px;margin-top:24px}
+.metro-photos .practice-photo-button img{max-height:500px;object-fit:contain;background:#080b09}
+.metro-photos .caption{color:#e0e1d9}
 .archive-links{margin:0 0 50px;padding-top:22px;border-top:1px solid #f4f2ed55}
 .archive-links>h3{font-family:Georgia,serif;font-style:italic;font-size:clamp(26px,3vw,38px);font-weight:500;line-height:1.2;margin:0 0 14px}
 .archive-intro{font-size:16px;line-height:1.6;color:#e0e1d9;margin:0 0 25px;max-width:65ch}
