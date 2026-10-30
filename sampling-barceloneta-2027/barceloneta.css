@@ -99,3 +99,28 @@
 }
 
 .contact {grid-template-columns:1fr;}
+
+/* Shared editorial language: mesh, framed windows, signal colours. */
+.section-paper { background-color: var(--paper); background-image: linear-gradient(rgba(8,8,8,.035) 1px, transparent 1px), linear-gradient(90deg,rgba(8,8,8,.035) 1px, transparent 1px); background-size:18px 18px; }
+.question-box { border:2px solid var(--ink); background:var(--acid); box-shadow:8px 8px 0 var(--ink); padding:26px; margin:0 0 54px; max-width:1000px; font:bold clamp(1.4rem,3vw,2.5rem)/1.22 Arial,sans-serif; }
+.test-windows { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px; }
+.test-window { border:2px solid var(--ink); background:var(--paper); box-shadow:8px 8px 0 var(--ink); }
+.test-window h3 { margin:0; padding:22px; font:bold clamp(1.3rem,2.5vw,2rem)/1.15 Arial,sans-serif; background:var(--blue); color:var(--paper); border-bottom:2px solid var(--ink); }
+.test-window.red h3 { background:var(--hot);color:var(--ink); }
+.test-window p { padding:26px; margin:0; font-size:1.1rem;line-height:1.7; }
+.mediation-copy { max-width:90ch; font-size:1.1rem;line-height:1.7; }
+.section-ink .return-loop {color:var(--ink);border-color:var(--paper);}
+.first-stage { border:2px solid var(--ink); background:var(--acid);padding:32px;box-shadow:8px 8px 0 var(--ink);margin-bottom:40px; }
+.first-stage h3 {font:bold clamp(1.8rem,3vw,2.8rem)/1.12 Arial,sans-serif;margin:20px 0;}
+.first-stage p {font-size:1.2rem;line-height:1.65;max-width:85ch;}
+.next-stages {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:32px 0;}
+.next-stages article {background:var(--paper);border:2px solid var(--ink);}
+.next-stages h3 {padding:20px;margin:0;background:var(--blue);color:var(--paper);font:bold 1.2rem/1.25 Arial,sans-serif;border-bottom:2px solid var(--ink);}
+.next-stages article:nth-child(2) h3 {background:var(--hot);color:var(--ink);}
+.next-stages article:nth-child(3) h3 {background:var(--ink);}
+.next-stages p {padding:22px;margin:0;font-size:1rem;line-height:1.65;}
+.time-note {background:var(--paper);border:2px solid var(--ink);padding:28px;max-width:1000px;}
+.time-note h3 {font:bold 1.5rem/1.2 Arial,sans-serif;margin:0 0 20px;}
+.time-note p {font-size:1rem;line-height:1.7;}
+.contact-copy a {overflow-wrap:anywhere;}
+@media(max-width:760px){.test-windows,.next-stages{grid-template-columns:1fr;}.question-box{padding:20px;}.test-window p,.first-stage,.time-note{padding:22px;}.hero-intro{font-size:1.2rem;}}

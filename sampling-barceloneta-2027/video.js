@@ -15,7 +15,7 @@
   function setBackground(play) {
     bg.hidden = !play;
     if (play) bg.src = frameURL(true); else bg.removeAttribute('src');
-    toggle.textContent = play ? 'Pausar fondo' : 'Reproducir fondo';
+    toggle.textContent = play ? 'Pausar el fons' : 'Reproduir el fons';
     toggle.setAttribute('aria-pressed', String(play));
   }
   // YouTube requires a referrer; keep the image as a fallback when embedding is blocked.
@@ -29,7 +29,7 @@
     if (!dialog.showModal) return;
     event.preventDefault(); setBackground(false);
     const frame = document.createElement('iframe');
-    frame.src = frameURL(false); frame.title = 'SAMPLING · Teaser de investigación';
+    frame.src = frameURL(false); frame.title = 'SAMPLING · Teaser de recerca';
     frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     frame.allowFullscreen = true; frame.referrerPolicy = 'strict-origin-when-cross-origin';
     player.replaceChildren(frame); dialog.showModal();
