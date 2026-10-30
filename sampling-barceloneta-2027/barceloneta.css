@@ -128,4 +128,9 @@
 .device-mini {max-width:240px;margin:40px 0 0;}
 .device-mini img {width:100%;height:auto;}
 .device-mini figcaption {font-size:.75rem;line-height:1.6;margin-top:14px;}
+#device .device-layout {grid-template-columns:1fr;gap:38px;}
+#device .technical-plan {max-width:1040px;}
+#device .device-copy {max-width:85ch;}
+#device .signal-chain {max-width:680px;}
+#equipo .scope-note {border-color:var(--paper);}
 @media(max-width:760px){.test-windows,.next-stages{grid-template-columns:1fr;}.question-box{padding:20px;}.test-window p,.first-stage,.time-note{padding:22px;}.hero-intro{font-size:1.2rem;}}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="430" viewBox="0 0 950 430" role="img" aria-labelledby="title desc">
+<title id="title">SAMPLING · dispositiu orientatiu</title>
+<desc id="desc">Planta horitzontal sense escala. Mylar al quart esquerre, cos al centre, càmera i micròfon a la dreta. Quatre projectors amb feixos creuats, distribuïdor, públic frontal i ordinador de control darrere del públic.</desc>
+<defs><pattern id="foil" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><path d="M0 0V12" stroke="#999" stroke-width="1"/></pattern><g id="proj" stroke="#080808" stroke-width="2" fill="#fffdf3"><rect x="-20" y="-12" width="40" height="26"/><path d="M-12-12v-9h24v9M-12 0h24M-12 6h24"/><circle cy="-16" r="3" fill="#2452ff"/></g></defs>
+<rect width="950" height="430" fill="#fffdf3"/>
+<g font-family="Arial,sans-serif" fill="#080808">
+<rect x="18" y="15" width="680" height="252" fill="none" stroke="#080808" stroke-width="2"/>
+<text x="354" y="40" font-size="18" text-anchor="middle" fill="#777">FONS</text>
+<g fill="#2452ff" fill-opacity=".045" stroke="#2452ff" stroke-opacity=".6" stroke-width="1.4" stroke-dasharray="7 6"><path d="M94 266L340 51L678 51Z"/><path d="M250 266L250 58L678 63Z"/><path d="M475 266L35 58L475 58Z"/><path d="M641 266L35 69L540 69Z"/></g>
+<path d="M32 32H276L260 82L230 112L211 143L194 189L210 235H32Z" fill="#dedfdf" stroke="#080808" stroke-width="2"/>
+<path d="M32 32H276L260 82L230 112L211 143L194 189L210 235H32Z" fill="url(#foil)"/>
+<text x="63" y="124" font-size="25" font-weight="700">MYLAR</text><text x="58" y="152" font-size="19">≈ ¼ de l’espai</text>
+<text x="370" y="151" text-anchor="middle" font-size="27" font-weight="700">COS</text>
+<g fill="none" stroke="#080808" stroke-width="2.4"><circle cx="565" cy="87" r="7"/><path d="M565 87l-24-20m24 20-12 28m12-28 12 28m-12-28v29"/><rect x="550" y="169" width="29" height="21"/><path d="M550 173l-12 4v8l12 3m15 3-16 24m16-24 16 24m-16-24v25"/></g>
+<text x="588" y="91" font-size="21">MICRO</text><text x="588" y="192" font-size="21">CÀMERA</text>
+<g font-size="22" font-weight="700" text-anchor="middle"><text x="94" y="245">P1</text><text x="250" y="245">P2</text><text x="475" y="245">P3</text><text x="641" y="245">P4</text></g>
+<use href="#proj" transform="translate(94 278) rotate(35)"/><use href="#proj" transform="translate(250 278) rotate(23)"/><use href="#proj" transform="translate(475 278) rotate(-23)"/><use href="#proj" transform="translate(641 278) rotate(-35)"/>
+<g fill="none" stroke="#888" stroke-width="1.4"><path d="M94 298v14H799m-549-14v14m225-14v14m166-14v14m158 0v-43"/><rect x="775" y="243" width="50" height="26"/><path d="M825 256h66v94" stroke-dasharray="5 4"/></g>
+<text x="742" y="214" font-size="20">DISTRIBUÏDOR</text><text x="788" y="237" font-size="20">1 × 4</text>
+<path d="M90 336H665" stroke="#080808" stroke-width="1.5"/>
+<g fill="#e4e4df" stroke="#333"><rect x="145" y="349" width="40" height="16"/><rect x="207" y="349" width="40" height="16"/><rect x="269" y="349" width="40" height="16"/><rect x="331" y="349" width="40" height="16"/><rect x="393" y="349" width="40" height="16"/><rect x="455" y="349" width="40" height="16"/><rect x="517" y="349" width="40" height="16"/></g>
+<text x="354" y="401" font-size="24" font-weight="700" text-anchor="middle">PÚBLIC FRONTAL</text>
+<g fill="none" stroke="#080808" stroke-width="2"><rect x="761" y="336" width="82" height="48"/><rect x="768" y="343" width="68" height="30"/><path d="M751 386h102l-10 9h-82Z"/></g>
+<text x="802" y="420" text-anchor="middle" font-size="19">ORDINADOR / CONTROL</text>
+</g></svg>
