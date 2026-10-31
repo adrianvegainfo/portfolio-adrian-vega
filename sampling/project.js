@@ -7,12 +7,25 @@
   document.querySelectorAll('.languages a').forEach(a=>a.addEventListener('click',()=>{const url=new URL(a.href);url.hash=location.hash;a.href=url.href;}));
   function update(){
     document.documentElement.style.setProperty('--header',header.offsetHeight+'px');
+    document.documentElement.style.setProperty('--dossier-header-height',header.offsetHeight+'px');
+    header.classList.toggle('is-scrolled',scrollY>40);
     let active=-1;
     sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<header.offsetHeight+140)active=i;});
     links.forEach((a,i)=>i===active?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));
   }
   addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
   const viewer=document.querySelector('#viewer'), content=viewer.querySelector('.viewer-content');
+  const background=document.querySelector('[data-background-video]'), toggle=document.querySelector('[data-background-toggle]');
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  function setBackground(play){
+    if(!background)return;
+    background.hidden=!play;
+    if(play){const params=new URLSearchParams({origin:location.origin,autoplay:'1',mute:'1',controls:'0',loop:'1',playlist:'pkP5lEjQFqI',playsinline:'1',rel:'0'});background.src='https://www.youtube.com/embed/pkP5lEjQFqI?'+params;}
+    else background.removeAttribute('src');
+    toggle.textContent=play?toggle.dataset.pause:toggle.dataset.play;
+    toggle.setAttribute('aria-pressed',String(play));
+  }
+  if(background){toggle.hidden=false;toggle.addEventListener('click',()=>setBackground(background.hidden));reduced.addEventListener('change',()=>setBackground(!reduced.matches));setBackground(!reduced.matches);}
   let returnFocus;
   document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{
     returnFocus=button;const image=new Image();image.src=button.dataset.image;image.alt=button.querySelector('img').alt;content.replaceChildren(image);viewer.showModal();
@@ -20,6 +33,7 @@
   document.querySelectorAll('[data-video]').forEach(link=>link.addEventListener('click',event=>{
     if(!viewer.showModal)return;
     event.preventDefault();returnFocus=link;
+    setBackground(false);
     const frame=document.createElement('iframe');
     const params=new URLSearchParams({autoplay:'1',rel:'0',playsinline:'1',origin:location.origin});
     frame.src='https://www.youtube.com/embed/'+link.dataset.video+'?'+params;
