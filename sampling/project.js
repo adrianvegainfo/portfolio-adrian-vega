@@ -1,7 +1,7 @@
 (() => {
   const header=document.querySelector('header'), menu=document.querySelector('.menu'), nav=document.querySelector('#sections');
   const links=[...nav.querySelectorAll('a')], sections=links.map(a=>document.querySelector(a.hash));
-  function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}
+  function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');update();}
   menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
   links.forEach(a=>a.addEventListener('click',closeMenu));
   document.querySelectorAll('.languages a').forEach(a=>a.addEventListener('click',()=>{const url=new URL(a.href);url.hash=location.hash;a.href=url.href;}));
