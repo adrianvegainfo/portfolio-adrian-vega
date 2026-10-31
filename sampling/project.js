@@ -1,7 +1,12 @@
 (() => {
   const header=document.querySelector('header'), menu=document.querySelector('.menu'), nav=document.querySelector('#sections');
   const links=[...nav.querySelectorAll('a')], sections=links.map(a=>document.querySelector(a.hash));
-  function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');update();}
+  const triggers=[...nav.querySelectorAll('[data-nav-trigger]')];
+  function closeGroups(){triggers.forEach(button=>{button.setAttribute('aria-expanded','false');document.getElementById(button.getAttribute('aria-controls')).hidden=true;});}
+  function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');closeGroups();update();}
+  triggers.forEach(button=>button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';closeGroups();button.setAttribute('aria-expanded',String(open));document.getElementById(button.getAttribute('aria-controls')).hidden=!open;}));
+  document.addEventListener('click',event=>{if(!nav.contains(event.target))closeGroups();});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'){const button=triggers.find(x=>x.getAttribute('aria-expanded')==='true');if(button){closeGroups();button.focus();}}});
   menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
   links.forEach(a=>a.addEventListener('click',closeMenu));
   document.querySelectorAll('.languages a').forEach(a=>a.addEventListener('click',()=>{const url=new URL(a.href);url.hash=location.hash;a.href=url.href;}));
@@ -12,6 +17,7 @@
     let active=-1;
     sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<header.offsetHeight+140)active=i;});
     links.forEach((a,i)=>i===active?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));
+    triggers.forEach(button=>button.classList.toggle('is-current',!!links[active]&&document.getElementById(button.getAttribute('aria-controls')).contains(links[active])));
   }
   addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();
   const viewer=document.querySelector('#viewer'), content=viewer.querySelector('.viewer-content');

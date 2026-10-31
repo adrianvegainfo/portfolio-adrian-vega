@@ -6,6 +6,17 @@ html{scroll-behavior:auto;scroll-padding-top:calc(var(--header,64px) + 16px)}
 .topbar .menu-button{display:none}
 .topbar .main-nav{justify-content:safe center}
 .topbar .main-nav a{font-size:.65rem;padding:8px;flex:none}
+.topbar .main-nav{overflow:visible;align-items:stretch}
+.nav-group{position:relative;display:flex;min-width:0}
+.nav-trigger{display:flex;align-items:center;justify-content:center;gap:9px;min-height:34px;border:1px solid var(--ink);padding:8px;background:#fff;color:var(--ink);font:900 .65rem/1.25 'Courier New',Courier,monospace;text-transform:uppercase;white-space:nowrap}
+.nav-trigger:hover,.nav-trigger[aria-expanded="true"]{background:var(--acid)}
+.nav-trigger.is-current{background:var(--hot);color:#fff}
+.nav-trigger:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.nav-submenu{position:absolute;top:calc(100% + 8px);left:0;z-index:100;min-width:235px;max-width:calc(100vw - 24px);border:var(--line);background:var(--paper);box-shadow:7px 7px 0 var(--ink)}
+.nav-submenu[hidden]{display:none}
+.topbar .main-nav .nav-submenu a{display:block;padding:14px 16px;min-height:44px;border:0;border-bottom:1px solid var(--ink);font-size:.8rem;text-align:left;white-space:normal}
+.topbar .main-nav .nav-submenu a:last-child{border-bottom:0}
+.topbar .main-nav .nav-submenu a:hover{background:var(--acid);color:var(--ink)}
 .topbar .language-switch a{min-width:30px;min-height:36px}
 .topbar .brand span{font-size:1.3rem}
 .topbar.is-scrolled{box-shadow:0 5px 0 var(--ink)}
@@ -86,5 +97,6 @@ dialog .close{position:absolute;right:15px;top:12px;background:transparent;color
 @media(max-width:1100px){.setup-grid{grid-template-columns:1fr}.videos{grid-template-columns:1fr}.gallery img{height:300px}}
 @media(max-width:760px){.section-heading{grid-template-columns:1fr}.method-grid,.mediation-grid,.process-grid,.stage-grid,.contact-grid{grid-template-columns:1fr}.gallery,.gallery.wide,.gallery.stage-images,.gallery.device-images{grid-template-columns:1fr 1fr;gap:22px 14px}.gallery img,.gallery.wide img,.gallery.stage-images img,.gallery.device-images img{height:260px;object-fit:contain}.gallery.maps{grid-template-columns:1fr}.gallery.maps img{height:auto;max-height:440px}.gallery.costume-images{grid-template-columns:1fr}.gallery.costume-images img{height:auto;max-height:600px}.hero-copy{padding-bottom:265px}.hero-status{grid-template-columns:repeat(2,minmax(0,1fr));left:12px;right:12px;bottom:18px}.hero-status div:last-child{grid-column:1/-1}.hero-status div{min-height:0;padding:12px;border-bottom:1px solid var(--ink)}.hero-status div:last-child{border-bottom:0}.hero{min-height:850px}.team-portrait{min-height:0}.team-portrait img{max-height:350px}.method-grid article,.process-grid article{padding:24px}.topbar .brand span{font-size:1.1rem}.topbar .language-switch a{min-width:25px;padding:4px;font-size:.58rem}.chapter article>h3{font-size:1.5rem}.state-column>h3{font-size:1.7rem!important}}
 @media(max-width:420px){.topbar{gap:5px;padding:5px}.topbar .brand span{font-size:.9rem}.topbar .language-switch a{min-width:23px}.topbar .main-nav a{font-size:.6rem;padding:8px 6px}.gallery img,.gallery.wide img,.gallery.stage-images img{height:220px}}
+@media(max-width:760px){.topbar{grid-template-columns:1fr auto;gap:7px;padding:7px 10px}.topbar .brand{grid-column:1;grid-row:1}.topbar>.language-switch{grid-column:2;grid-row:1}.topbar .main-nav{grid-column:1/-1;grid-row:2;display:flex;flex-wrap:nowrap;justify-content:center;width:100%;gap:4px}.nav-group{position:static;flex:1;min-width:0}.nav-trigger{width:100%;min-height:44px;padding:7px 5px;font-size:.62rem;white-space:normal;gap:4px}.topbar .main-nav>.nav-contact{display:flex;align-items:center;justify-content:center;min-height:44px;padding:7px 6px;font-size:.6rem}.nav-submenu{left:10px;right:10px;top:100%;max-width:none;min-width:0}.topbar .main-nav .nav-submenu a{font-size:.875rem;padding:15px}.topbar .brand span{font-size:1.1rem}}
 @media(prefers-reduced-motion:reduce){.signal-strip div{animation:none}}
 @media print{.topbar,.hero-video,.hero-actions,dialog{display:none}.chapter{break-before:page}.signal-strip div{animation:none}.gallery img{height:50mm}.team-card{break-inside:avoid}.hero-status{position:static;max-width:none}.hero-copy{padding:30px}.hero{min-height:0}.hero-media,.hero-shade{display:none}}
