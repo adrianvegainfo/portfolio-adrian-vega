@@ -10,6 +10,18 @@
   menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
   links.forEach(a=>a.addEventListener('click',closeMenu));
   document.querySelectorAll('.languages a').forEach(a=>a.addEventListener('click',()=>{const url=new URL(a.href);url.hash=location.hash;a.href=url.href;}));
+  const languageMenus=[...document.querySelectorAll('.language-menu')];
+  languageMenus.forEach(details=>details.addEventListener('toggle',()=>{
+    if(details.open)languageMenus.filter(other=>other!==details).forEach(other=>other.open=false);
+  }));
+  document.addEventListener('click',event=>languageMenus.forEach(details=>{
+    if(details.open&&!details.contains(event.target))details.open=false;
+  }));
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape')languageMenus.forEach(details=>{
+      if(details.open){details.open=false;details.querySelector('summary').focus();}
+    });
+  });
   function update(){
     document.documentElement.style.setProperty('--header',header.offsetHeight+'px');
     document.documentElement.style.setProperty('--dossier-header-height',header.offsetHeight+'px');
